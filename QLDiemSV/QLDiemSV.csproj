@@ -56,6 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\LoaiGVBLL.cs" />
+    <Compile Include="BLL\LoaiLopBLL.cs" />
+    <Compile Include="BLL\LoaiPhongBLL.cs" />
+    <Compile Include="BLL\PhongHocBLL.cs" />
+    <Compile Include="BLL\TaiKhoanBLL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLSinhVien.designer.cs">
@@ -98,7 +103,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
     <Folder Include="Resources\" />
     <Folder Include="UI\Admin\" />
     <Folder Include="UI\Student\" />
