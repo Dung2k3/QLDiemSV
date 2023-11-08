@@ -56,6 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\LoaiGVBLL.cs" />
+    <Compile Include="BLL\LoaiLopBLL.cs" />
+    <Compile Include="BLL\LoaiPhongBLL.cs" />
+    <Compile Include="BLL\PhongHocBLL.cs" />
+    <Compile Include="BLL\TaiKhoanBLL.cs" />
     <Compile Include="BLL\CaHoc.cs" />
     <Compile Include="BLL\LopBLL.cs" />
     <Compile Include="BLL\MonHocBLL.cs" />
