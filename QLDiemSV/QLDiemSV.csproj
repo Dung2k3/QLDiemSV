@@ -56,6 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CaHoc.cs" />
+    <Compile Include="BLL\LopBLL.cs" />
+    <Compile Include="BLL\MonHocBLL.cs" />
+    <Compile Include="BLL\MonTienQuyet.cs" />
     <Compile Include="BLL\SinhVienBLL.cs" />
     <Compile Include="BLL\BuoiHocBLL.cs" />
     <Compile Include="BLL\DiemBLL.cs" />
