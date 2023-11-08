@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\SinhVienBLL.cs" />
     <Compile Include="BLL\BuoiHocBLL.cs" />
     <Compile Include="BLL\DiemBLL.cs" />
     <Compile Include="BLL\GiangVienBLL.cs" />
@@ -67,6 +68,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLSinhVien.dbml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Student\FSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\FSinhVien.Designer.cs">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\FThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\FThongTin.Designer.cs">
+      <DependentUpon>FThongTin.cs</DependentUpon>
     <Compile Include="UI\Teacher\FThongTinGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +94,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Student\FSinhVien.resx">
+      <DependentUpon>FSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\FThongTin.resx">
+      <DependentUpon>FThongTin.cs</DependentUpon>
     <EmbeddedResource Include="UI\Teacher\FThongTinGiangVien.resx">
       <DependentUpon>FThongTinGiangVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +130,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="UI\Admin\" />
+    <Folder Include="UI\Teacher\" />
     <Folder Include="UI\Student\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
