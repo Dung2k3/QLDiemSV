@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLDiemSV" Class="QLSinhVienDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\mssqllocaldb;Initial Catalog=QLDiemSV;Integrated Security=True" SettingsObjectName="QLDiemSV.Properties.Settings" SettingsPropertyName="QLDiemSVConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CAHOC" Member="CAHOCs">
+    <Type Name="CAHOC">
+      <Column Name="MaCa" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TGBatDau" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="TGKetThuc" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Association Name="CAHOC_BUOIHOC" Member="BUOIHOCs" ThisKey="MaCa" OtherKey="MaCa" Type="BUOIHOC" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BUOIHOC" Member="BUOIHOCs">
+    <Type Name="BUOIHOC">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaCa" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaPhong" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Thu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="CAHOC_BUOIHOC" Member="CAHOC" ThisKey="MaCa" OtherKey="MaCa" Type="CAHOC" IsForeignKey="true" />
+      <Association Name="LOP_BUOIHOC" Member="LOP" ThisKey="MaLop" OtherKey="MaLop" Type="LOP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PHONGHOC_BUOIHOC" Member="PHONGHOC" ThisKey="MaPhong" OtherKey="MaPhong" Type="PHONGHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GIANGVIEN" Member="GIANGVIENs">
+    <Type Name="GIANGVIEN">
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoGV" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TenlotGV" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CCCD" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Gioitinh" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MaLoaiGV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaKhoa" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="GIANGVIEN_KHOA" Member="KHOAs" ThisKey="MaGV" OtherKey="MaTrKhoa" Type="KHOA" />
+      <Association Name="GIANGVIEN_LOP" Member="LOPs" ThisKey="MaGV" OtherKey="MaGV" Type="LOP" />
+      <Association Name="LOAIGV_GIANGVIEN" Member="LOAIGV" ThisKey="MaLoaiGV" OtherKey="MaLoaiGV" Type="LOAIGV" IsForeignKey="true" />
+      <Association Name="KHOA_GIANGVIEN" Member="KHOA" ThisKey="MaKhoa" OtherKey="MaKhoa" Type="KHOA" IsForeignKey="true" />
+      <Association Name="TAIKHOAN_GIANGVIEN" Member="TAIKHOAN1" ThisKey="TaiKhoan" OtherKey="TaiKhoan1" Type="TAIKHOAN" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIEM" Member="DIEMs">
+    <Type Name="DIEM">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DiemQT" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="DiemCK" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Association Name="LOP_DIEM" Member="LOP" ThisKey="MaLop" OtherKey="MaLop" Type="LOP" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="SINHVIEN_DIEM" Member="SINHVIEN" ThisKey="MaSV" OtherKey="MaSV" Type="SINHVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAIGV" Member="LOAIGVs">
+    <Type Name="LOAIGV">
+      <Column Name="MaLoaiGV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="LOAIGV_GIANGVIEN" Member="GIANGVIENs" ThisKey="MaLoaiGV" OtherKey="MaLoaiGV" Type="GIANGVIEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHOA" Member="KHOAs">
+    <Type Name="KHOA">
+      <Column Name="MaKhoa" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MaTrKhoa" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="KHOA_GIANGVIEN" Member="GIANGVIENs" ThisKey="MaKhoa" OtherKey="MaKhoa" Type="GIANGVIEN" />
+      <Association Name="KHOA_MONHOC" Member="MONHOCs" ThisKey="MaKhoa" OtherKey="MaKhoa" Type="MONHOC" />
+      <Association Name="KHOA_SINHVIEN" Member="SINHVIENs" ThisKey="MaKhoa" OtherKey="MaKhoa" Type="SINHVIEN" />
+      <Association Name="GIANGVIEN_KHOA" Member="GIANGVIEN" ThisKey="MaTrKhoa" OtherKey="MaGV" Type="GIANGVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAILOP" Member="LOAILOPs">
+    <Type Name="LOAILOP">
+      <Column Name="MaLoaiLop" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="LOAILOP_LOP" Member="LOPs" ThisKey="MaLoaiLop" OtherKey="MaLoaiLop" Type="LOP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAIPHONG" Member="LOAIPHONGs">
+    <Type Name="LOAIPHONG">
+      <Column Name="MaLoaiPhong" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="LOAIPHONG_PHONGHOC" Member="PHONGHOCs" ThisKey="MaLoaiPhong" OtherKey="MaLoaiPhong" Type="PHONGHOC" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOP" Member="LOPs">
+    <Type Name="LOP">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MaLoaiLop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HK" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Namhoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaMon" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="LOP_BUOIHOC" Member="BUOIHOCs" ThisKey="MaLop" OtherKey="MaLop" Type="BUOIHOC" />
+      <Association Name="LOP_DIEM" Member="DIEMs" ThisKey="MaLop" OtherKey="MaLop" Type="DIEM" />
+      <Association Name="GIANGVIEN_LOP" Member="GIANGVIEN" ThisKey="MaGV" OtherKey="MaGV" Type="GIANGVIEN" IsForeignKey="true" />
+      <Association Name="LOAILOP_LOP" Member="LOAILOP" ThisKey="MaLoaiLop" OtherKey="MaLoaiLop" Type="LOAILOP" IsForeignKey="true" />
+      <Association Name="MONHOC_LOP" Member="MONHOC" ThisKey="MaMon" OtherKey="MaMon" Type="MONHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MONHOC" Member="MONHOCs">
+    <Type Name="MONHOC">
+      <Column Name="MaMon" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SoTinChi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaKhoa" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="MONHOC_LOP" Member="LOPs" ThisKey="MaMon" OtherKey="MaMon" Type="LOP" />
+      <Association Name="MONHOC_MONTIENQUYET" Member="MONTIENQUYETs" ThisKey="MaMon" OtherKey="MaMon" Type="MONTIENQUYET" />
+      <Association Name="MONHOC_MONTIENQUYET1" Member="MONTIENQUYETs1" ThisKey="MaMon" OtherKey="MaMonTQ" Type="MONTIENQUYET" />
+      <Association Name="KHOA_MONHOC" Member="KHOA" ThisKey="MaKhoa" OtherKey="MaKhoa" Type="KHOA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MONTIENQUYET" Member="MONTIENQUYETs">
+    <Type Name="MONTIENQUYET">
+      <Column Name="MaMon" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaMonTQ" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="MONHOC_MONTIENQUYET" Member="MONHOC" ThisKey="MaMon" OtherKey="MaMon" Type="MONHOC" IsForeignKey="true" />
+      <Association Name="MONHOC_MONTIENQUYET1" Member="MONHOC1" ThisKey="MaMonTQ" OtherKey="MaMon" Type="MONHOC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHONGHOC" Member="PHONGHOCs">
+    <Type Name="PHONGHOC">
+      <Column Name="MaPhong" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaLoaiPhong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SucChua" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Toa" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="PHONGHOC_BUOIHOC" Member="BUOIHOCs" ThisKey="MaPhong" OtherKey="MaPhong" Type="BUOIHOC" />
+      <Association Name="LOAIPHONG_PHONGHOC" Member="LOAIPHONG" ThisKey="MaLoaiPhong" OtherKey="MaLoaiPhong" Type="LOAIPHONG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SINHVIEN" Member="SINHVIENs">
+    <Type Name="SINHVIEN">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoSV" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TenlotSV" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TenSV" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CCCD" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Gioitinh" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NamNhapHoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaKhoa" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="SINHVIEN_DIEM" Member="DIEMs" ThisKey="MaSV" OtherKey="MaSV" Type="DIEM" />
+      <Association Name="KHOA_SINHVIEN" Member="KHOA" ThisKey="MaKhoa" OtherKey="MaKhoa" Type="KHOA" IsForeignKey="true" />
+      <Association Name="TAIKHOAN_SINHVIEN" Member="TAIKHOAN1" ThisKey="TaiKhoan" OtherKey="TaiKhoan1" Type="TAIKHOAN" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
+    <Type Name="TAIKHOAN">
+      <Column Name="TaiKhoan" Member="TaiKhoan1" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Loai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TAIKHOAN_GIANGVIEN" Member="GIANGVIENs" ThisKey="TaiKhoan1" OtherKey="TaiKhoan" Type="GIANGVIEN" />
+      <Association Name="TAIKHOAN_SINHVIEN" Member="SINHVIENs" ThisKey="TaiKhoan1" OtherKey="TaiKhoan" Type="SINHVIEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vi_DiemTBTheoLop" Member="vi_DiemTBTheoLops">
+    <Type Name="vi_DiemTBTheoLop">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DiemQT" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="DiemCK" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="DiemTB" Type="System.Decimal" DbType="Decimal(9,6)" CanBeNull="true" />
+      <Column Name="QUAMON" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vi_DiemTBTheoMon" Member="vi_DiemTBTheoMons">
+    <Type Name="vi_DiemTBTheoMon">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaMon" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DiemTB" Type="System.Decimal" DbType="Decimal(9,6)" CanBeNull="true" />
+      <Column Name="QUAMON" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vi_ThongTinGV" Member="vi_ThongTinGVs">
+    <Type Name="vi_ThongTinGV">
+      <Column Name="MaGV" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
+      <Column Name="CCCD" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="GioiTinh" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TruongKhoa" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LoaiGV" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vi_ThongTinLop" Member="vi_ThongTinLops">
+    <Type Name="vi_ThongTinLop">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuongSV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLuongMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NamHoc" Type="System.String" DbType="VarChar(115) NOT NULL" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vi_ThongTinSV" Member="vi_ThongTinSVs">
+    <Type Name="vi_ThongTinSV">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="HoTenSV" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="CCCD" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="GioiTinh" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NamNhapHoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TBTichLuy" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ChkEmail" Method="ChkEmail" IsComposable="true">
+    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.ft_TaoMaGV" Method="ft_TaoMaGV" IsComposable="true">
+    <Parameter Name="MaKhoa" Parameter="maKhoa" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.ft_TaoMaLop" Method="ft_TaoMaLop" IsComposable="true">
+    <Parameter Name="MaMon" Parameter="maMon" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="NamHoc" Parameter="namHoc" Type="System.Int32" DbType="Int" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.ft_TaoMaSV" Method="ft_TaoMaSV" IsComposable="true">
+    <Parameter Name="NamHoc" Parameter="namHoc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MaKhoa" Parameter="maKhoa" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.String" />
+  </Function>
+</Database>
