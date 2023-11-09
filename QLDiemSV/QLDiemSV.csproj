@@ -89,11 +89,11 @@
     <Compile Include="UI\Student\FThongTin.Designer.cs">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Teacher\FThongTinGiangVien.cs">
+    <Compile Include="UI\Teacher\FGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Teacher\FThongTinGiangVien.Designer.cs">
-      <DependentUpon>FThongTinGiangVien.cs</DependentUpon>
+    <Compile Include="UI\Teacher\FGiangVien.Designer.cs">
+      <DependentUpon>FGiangVien.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,6 +103,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\Student\FSinhVien.resx">
       <DependentUpon>FSinhVien.cs</DependentUpon>
@@ -110,8 +111,8 @@
     <EmbeddedResource Include="UI\Student\FThongTin.resx">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Teacher\FThongTinGiangVien.resx">
-      <DependentUpon>FThongTinGiangVien.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Teacher\FGiangVien.resx">
+      <DependentUpon>FGiangVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -139,10 +140,22 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
     <Folder Include="UI\Admin\" />
-    <Folder Include="UI\Teacher\" />
-    <Folder Include="UI\Student\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
