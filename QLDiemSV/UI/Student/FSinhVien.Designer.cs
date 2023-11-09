@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSinhVien));
             this.pnlNoiDung = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -39,8 +38,6 @@
             this.btnPhongHoc = new Guna.UI2.WinForms.Guna2Button();
             this.btnKetQua = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox4 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -52,7 +49,7 @@
             // 
             this.pnlNoiDung.AutoScroll = true;
             this.pnlNoiDung.BackColor = System.Drawing.Color.Transparent;
-            this.pnlNoiDung.Location = new System.Drawing.Point(343, 41);
+            this.pnlNoiDung.Location = new System.Drawing.Point(333, 41);
             this.pnlNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlNoiDung.Name = "pnlNoiDung";
             this.pnlNoiDung.Size = new System.Drawing.Size(1200, 757);
@@ -69,7 +66,7 @@
             this.guna2Panel2.Controls.Add(this.btnKetQua);
             this.guna2Panel2.Controls.Add(this.btnDangXuat);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(1, -2);
+            this.guna2Panel2.Location = new System.Drawing.Point(-9, -2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(343, 800);
             this.guna2Panel2.TabIndex = 119;
@@ -93,7 +90,7 @@
             this.btnThongTinCaNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(56)))), ((int)(((byte)(100)))));
             this.btnThongTinCaNhan.HoverState.FillColor = System.Drawing.Color.White;
             this.btnThongTinCaNhan.HoverState.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongTinCaNhan.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTinCaNhan.Image")));
+            this.btnThongTinCaNhan.Image = global::QLDiemSV.Properties.Resources.profile__3_;
             this.btnThongTinCaNhan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThongTinCaNhan.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnThongTinCaNhan.ImageSize = new System.Drawing.Size(30, 30);
@@ -121,11 +118,11 @@
             this.btnTKB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTKB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTKB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
-            this.btnTKB.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTKB.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnTKB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(56)))), ((int)(((byte)(100)))));
             this.btnTKB.HoverState.FillColor = System.Drawing.Color.White;
             this.btnTKB.HoverState.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTKB.Image = ((System.Drawing.Image)(resources.GetObject("btnTKB.Image")));
+            this.btnTKB.Image = global::QLDiemSV.Properties.Resources.schedule__1_;
             this.btnTKB.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTKB.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnTKB.ImageSize = new System.Drawing.Size(30, 30);
@@ -141,9 +138,9 @@
             // pbTrangChu
             // 
             this.pbTrangChu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbTrangChu.Image = ((System.Drawing.Image)(resources.GetObject("pbTrangChu.Image")));
+            this.pbTrangChu.Image = global::QLDiemSV.Properties.Resources.Logo;
             this.pbTrangChu.ImageRotate = 0F;
-            this.pbTrangChu.Location = new System.Drawing.Point(98, 75);
+            this.pbTrangChu.Location = new System.Drawing.Point(92, 74);
             this.pbTrangChu.Name = "pbTrangChu";
             this.pbTrangChu.Size = new System.Drawing.Size(143, 130);
             this.pbTrangChu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -165,11 +162,11 @@
             this.btnPhongHoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnPhongHoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnPhongHoc.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
-            this.btnPhongHoc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhongHoc.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnPhongHoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(56)))), ((int)(((byte)(100)))));
             this.btnPhongHoc.HoverState.FillColor = System.Drawing.Color.White;
             this.btnPhongHoc.HoverState.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhongHoc.Image = ((System.Drawing.Image)(resources.GetObject("btnPhongHoc.Image")));
+            this.btnPhongHoc.Image = global::QLDiemSV.Properties.Resources.classroom;
             this.btnPhongHoc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPhongHoc.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnPhongHoc.ImageSize = new System.Drawing.Size(30, 30);
@@ -201,7 +198,7 @@
             this.btnKetQua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(56)))), ((int)(((byte)(100)))));
             this.btnKetQua.HoverState.FillColor = System.Drawing.Color.White;
             this.btnKetQua.HoverState.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKetQua.Image = ((System.Drawing.Image)(resources.GetObject("btnKetQua.Image")));
+            this.btnKetQua.Image = global::QLDiemSV.Properties.Resources.score;
             this.btnKetQua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKetQua.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnKetQua.ImageSize = new System.Drawing.Size(30, 30);
@@ -233,7 +230,7 @@
             this.btnDangXuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(56)))), ((int)(((byte)(100)))));
             this.btnDangXuat.HoverState.FillColor = System.Drawing.Color.White;
             this.btnDangXuat.HoverState.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
+            this.btnDangXuat.Image = global::QLDiemSV.Properties.Resources.logout;
             this.btnDangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDangXuat.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnDangXuat.ImageSize = new System.Drawing.Size(30, 30);
@@ -245,34 +242,6 @@
             this.btnDangXuat.TextOffset = new System.Drawing.Point(50, 0);
             this.btnDangXuat.UseTransparentBackground = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.BorderRadius = 5;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
-            this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1735, 7);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(33, 29);
-            this.guna2ControlBox1.TabIndex = 120;
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.BorderRadius = 5;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1691, 7);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(33, 29);
-            this.guna2ControlBox2.TabIndex = 121;
             // 
             // guna2ControlBox3
             // 
@@ -311,10 +280,9 @@
             this.Controls.Add(this.guna2ControlBox4);
             this.Controls.Add(this.pnlNoiDung);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2ControlBox1);
-            this.Controls.Add(this.guna2ControlBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FSinhVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "F";
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbTrangChu)).EndInit();
@@ -333,8 +301,6 @@
         private Guna.UI2.WinForms.Guna2Button btnPhongHoc;
         private Guna.UI2.WinForms.Guna2Button btnKetQua;
         private Guna.UI2.WinForms.Guna2Button btnDangXuat;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox4;
