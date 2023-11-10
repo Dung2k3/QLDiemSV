@@ -10,13 +10,13 @@ namespace QLDiemSV.BLL
 {
     internal class TaiKhoanBLL
     {
-        public List<TAIKHOAN> FindAll(TAIKHOAN tk)
+        public List<TAIKHOAN> FindAll()
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.TAIKHOANs.ToList();
         }
 
-        public TAIKHOAN FindByID(String taikhoan)
+        public TAIKHOAN FindByID(string taikhoan)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.TAIKHOANs.FirstOrDefault(tk => tk.TaiKhoan1.Equals(taikhoan));
@@ -51,7 +51,7 @@ namespace QLDiemSV.BLL
             }
         }
 
-        public void Delete(String taikhoan)
+        public void Delete(string taikhoan)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
@@ -64,6 +64,16 @@ namespace QLDiemSV.BLL
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+        public string CheckDangNhap(string tk, string mk,int loai)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.ft_ChkDangNhap(tk, mk, loai);
+        }
+        public bool CheckQuenMK(string tk, string email, string cccd, int loai)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return (bool)db.ft_ChkQuenMatKhau(tk, email, cccd, loai);   
         }
     }
 }

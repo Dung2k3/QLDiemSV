@@ -38,7 +38,7 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
-                MONHOC updateMonHoc = db.MONHOCs.FirstOrDefault(e=>e.MaMon.Equals(monHoc.MaMon);
+                MONHOC updateMonHoc = db.MONHOCs.FirstOrDefault(e=>e.MaMon.Equals(monHoc.MaMon));
                 updateMonHoc.TenMon = monHoc.TenMon;
                 updateMonHoc.SoTinChi = monHoc.SoTinChi;
                 db.SubmitChanges();
