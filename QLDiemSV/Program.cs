@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLDiemSV.UI.Student;
+using QLDiemSV.UI;
 
 namespace QLDiemSV
 {
@@ -17,7 +18,7 @@ namespace QLDiemSV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FSinhVien());
+            Application.Run(new FDangNhap());
         }
     }
 }

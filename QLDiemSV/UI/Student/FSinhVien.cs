@@ -55,5 +55,10 @@ namespace QLDiemSV.UI.Student
             UCThongTinLopSV ucTTGV = new UCThongTinLopSV(sinhvien);
             pnlNoiDung.Controls.Add(ucTTGV);
         }
+
+        private void guna2ControlBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

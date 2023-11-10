@@ -13,8 +13,15 @@ namespace QLDiemSV.BLL
     {
         public List<LOP> FindAllLop()
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
-            return db.LOPs.ToList();
+            try
+            {
+                QLSinhVienDataContext db = new QLSinhVienDataContext();
+                return db.LOPs.ToList();
+            } catch (SqlException e)
+            {
+                MessageBox.Show(e.ToString());
+                return null;
+            }
         }
 
         public LOP FindByID(string maLop)

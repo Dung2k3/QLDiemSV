@@ -68,6 +68,12 @@ namespace QLDiemSV.Properties {
                 object obj = ResourceManager.GetObject("classroom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
+
+        internal static System.Drawing.Bitmap account__1_ {
+            get {
+                object obj = ResourceManager.GetObject("account (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
         }
         
         /// <summary>
@@ -148,6 +154,11 @@ namespace QLDiemSV.Properties {
                 object obj = ResourceManager.GetObject("question", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
+        internal static System.Drawing.Bitmap sách_ {
+            get {
+                object obj = ResourceManager.GetObject("sách ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
         }
         
         /// <summary>
@@ -178,6 +189,13 @@ namespace QLDiemSV.Properties {
                 object obj = ResourceManager.GetObject("warning", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
+        }   
+        internal static System.Drawing.Bitmap Artboard_1_4x3 {
+            get {
+                object obj = ResourceManager.GetObject("Artboard 1@4x3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
         }
     }
 }
+
