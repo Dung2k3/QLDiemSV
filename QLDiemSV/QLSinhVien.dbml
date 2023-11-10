@@ -197,19 +197,6 @@
       <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.vi_ThongTinLop" Member="vi_ThongTinLops">
-    <Type Name="vi_ThongTinLop">
-      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="TenLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="TenMon" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="SoLuongSV" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SoLuongMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="HocKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="NamHoc" Type="System.String" DbType="VarChar(115) NOT NULL" CanBeNull="false" />
-      <Column Name="TenGV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.vi_ThongTinSV" Member="vi_ThongTinSVs">
     <Type Name="vi_ThongTinSV">
       <Column Name="MaSV" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
@@ -224,6 +211,20 @@
       <Column Name="TenKhoa" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="TBTichLuy" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vi_ThongTinLop" Member="vi_ThongTinLops">
+    <Type Name="vi_ThongTinLop">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuongSV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLuongMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTinChi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NamHoc" Type="System.String" DbType="VarChar(115) NOT NULL" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Function Name="dbo.ChkEmail" Method="ChkEmail" IsComposable="true">
@@ -243,5 +244,48 @@
     <Parameter Name="NamHoc" Parameter="namHoc" Type="System.Int32" DbType="Int" />
     <Parameter Name="MaKhoa" Parameter="maKhoa" Type="System.String" DbType="VarChar(20)" />
     <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.FT_ThongTinLopTheoHS" Method="FT_ThongTinLopTheoHS" IsComposable="true">
+    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="HK" Parameter="hK" Type="System.Int32" DbType="Int" />
+    <Parameter Name="namhoc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FT_ThongTinLopTheoHSResult">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SoTinChi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
+      <Column Name="DiemCK" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="DiemQT" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="DiemTB" Type="System.Decimal" DbType="Decimal(3,1)" CanBeNull="true" />
+      <Column Name="QUAMON" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ft_TinhTBTL" Method="ft_TinhTBTL" IsComposable="true">
+    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Decimal" />
+  </Function>
+  <Function Name="dbo.FT_TKBSVTheoHK" Method="FT_TKBSVTheoHK" IsComposable="true">
+    <Parameter Name="MaSV" Parameter="maSV" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="HK" Parameter="hK" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NamHoc" Parameter="namHoc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="FT_TKBSVTheoHKResult">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MaMon" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Namhoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MaCa" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TGBatDau" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="TGKetThuc" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="MaPhong" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Toa" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SucChua" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Thu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTinChi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>

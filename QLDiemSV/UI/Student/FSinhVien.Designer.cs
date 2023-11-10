@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSinhVien));
             this.pnlNoiDung = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -36,7 +37,6 @@
             this.btnTKB = new Guna.UI2.WinForms.Guna2Button();
             this.pbTrangChu = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnPhongHoc = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKetQua = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -63,12 +63,11 @@
             this.guna2Panel2.Controls.Add(this.btnTKB);
             this.guna2Panel2.Controls.Add(this.pbTrangChu);
             this.guna2Panel2.Controls.Add(this.btnPhongHoc);
-            this.guna2Panel2.Controls.Add(this.btnKetQua);
             this.guna2Panel2.Controls.Add(this.btnDangXuat);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(-9, -2);
+            this.guna2Panel2.Location = new System.Drawing.Point(-13, -1);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(343, 800);
+            this.guna2Panel2.Size = new System.Drawing.Size(347, 800);
             this.guna2Panel2.TabIndex = 119;
             // 
             // btnThongTinCaNhan
@@ -126,7 +125,7 @@
             this.btnTKB.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTKB.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnTKB.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTKB.Location = new System.Drawing.Point(-35, 385);
+            this.btnTKB.Location = new System.Drawing.Point(-35, 392);
             this.btnTKB.Name = "btnTKB";
             this.btnTKB.Size = new System.Drawing.Size(351, 62);
             this.btnTKB.TabIndex = 118;
@@ -140,7 +139,7 @@
             this.pbTrangChu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbTrangChu.Image = global::QLDiemSV.Properties.Resources.Logo;
             this.pbTrangChu.ImageRotate = 0F;
-            this.pbTrangChu.Location = new System.Drawing.Point(92, 74);
+            this.pbTrangChu.Location = new System.Drawing.Point(126, 68);
             this.pbTrangChu.Name = "pbTrangChu";
             this.pbTrangChu.Size = new System.Drawing.Size(143, 130);
             this.pbTrangChu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -170,7 +169,7 @@
             this.btnPhongHoc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPhongHoc.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnPhongHoc.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPhongHoc.Location = new System.Drawing.Point(-35, 486);
+            this.btnPhongHoc.Location = new System.Drawing.Point(-35, 500);
             this.btnPhongHoc.Name = "btnPhongHoc";
             this.btnPhongHoc.Size = new System.Drawing.Size(351, 62);
             this.btnPhongHoc.TabIndex = 110;
@@ -178,38 +177,6 @@
             this.btnPhongHoc.TextOffset = new System.Drawing.Point(50, 0);
             this.btnPhongHoc.UseTransparentBackground = true;
             this.btnPhongHoc.Click += new System.EventHandler(this.btnPhongHoc_Click);
-            // 
-            // btnKetQua
-            // 
-            this.btnKetQua.BackColor = System.Drawing.Color.Transparent;
-            this.btnKetQua.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(56)))), ((int)(((byte)(100)))));
-            this.btnKetQua.BorderRadius = 25;
-            this.btnKetQua.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnKetQua.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnKetQua.CheckedState.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btnKetQua.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(56)))), ((int)(((byte)(100)))));
-            this.btnKetQua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKetQua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKetQua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKetQua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKetQua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKetQua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
-            this.btnKetQua.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.btnKetQua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(56)))), ((int)(((byte)(100)))));
-            this.btnKetQua.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnKetQua.HoverState.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKetQua.Image = global::QLDiemSV.Properties.Resources.score;
-            this.btnKetQua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnKetQua.ImageOffset = new System.Drawing.Point(60, 0);
-            this.btnKetQua.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnKetQua.Location = new System.Drawing.Point(-35, 587);
-            this.btnKetQua.Name = "btnKetQua";
-            this.btnKetQua.Size = new System.Drawing.Size(351, 62);
-            this.btnKetQua.TabIndex = 113;
-            this.btnKetQua.Text = "Academic performance";
-            this.btnKetQua.TextOffset = new System.Drawing.Point(50, 0);
-            this.btnKetQua.UseTransparentBackground = true;
-            this.btnKetQua.Click += new System.EventHandler(this.btnKetQua_Click);
             // 
             // btnDangXuat
             // 
@@ -234,7 +201,7 @@
             this.btnDangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDangXuat.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnDangXuat.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDangXuat.Location = new System.Drawing.Point(-35, 688);
+            this.btnDangXuat.Location = new System.Drawing.Point(-35, 608);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(351, 62);
             this.btnDangXuat.TabIndex = 111;
@@ -275,15 +242,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1500, 798);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox4);
             this.Controls.Add(this.pnlNoiDung);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FSinhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "F";
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbTrangChu)).EndInit();
             this.ResumeLayout(false);
@@ -299,7 +267,6 @@
         private Guna.UI2.WinForms.Guna2Button btnTKB;
         private Guna.UI2.WinForms.Guna2PictureBox pbTrangChu;
         private Guna.UI2.WinForms.Guna2Button btnPhongHoc;
-        private Guna.UI2.WinForms.Guna2Button btnKetQua;
         private Guna.UI2.WinForms.Guna2Button btnDangXuat;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;

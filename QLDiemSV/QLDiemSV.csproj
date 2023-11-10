@@ -72,10 +72,19 @@
     <Compile Include="BLL\KhoaBLL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLSinhVien.cs">
+      <DependentUpon>QLSinhVien.dbml</DependentUpon>
+    </Compile>
     <Compile Include="QLSinhVien.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLSinhVien.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FMessageBox.Designer.cs">
+      <DependentUpon>FMessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Student\FSinhVien.cs">
       <SubType>Form</SubType>
@@ -83,11 +92,41 @@
     <Compile Include="UI\Student\FSinhVien.Designer.cs">
       <DependentUpon>FSinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Student\FThongTinSV.cs">
+    <Compile Include="UI\Student\FUpdateThongTinSV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Student\FThongTinSV.Designer.cs">
-      <DependentUpon>FThongTinSV.cs</DependentUpon>
+    <Compile Include="UI\Student\FUpdateThongTinSV.Designer.cs">
+      <DependentUpon>FUpdateThongTinSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\UCChiTietTKBSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Student\UCChiTietTKBSV.Designer.cs">
+      <DependentUpon>UCChiTietTKBSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\UCThoiKhoaBieuSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Student\UCThoiKhoaBieuSV.Designer.cs">
+      <DependentUpon>UCThoiKhoaBieuSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\UCThongTinLopSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Student\UCThongTinLopSV.Designer.cs">
+      <DependentUpon>UCThongTinLopSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\UCChiTietTKBSVBlank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Student\UCChiTietTKBSVBlank.Designer.cs">
+      <DependentUpon>UCChiTietTKBSVBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\UCThongTinSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Student\UCThongTinSV.Designer.cs">
+      <DependentUpon>UCThongTinSV.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Teacher\FThongTinGV.cs">
       <SubType>Form</SubType>
@@ -105,11 +144,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\FMessageBox.resx">
+      <DependentUpon>FMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Student\FSinhVien.resx">
       <DependentUpon>FSinhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Student\FThongTinSV.resx">
-      <DependentUpon>FThongTinSV.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Student\FUpdateThongTinSV.resx">
+      <DependentUpon>FUpdateThongTinSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\UCChiTietTKBSV.resx">
+      <DependentUpon>UCChiTietTKBSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\UCThoiKhoaBieuSV.resx">
+      <DependentUpon>UCThoiKhoaBieuSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\UCThongTinLopSV.resx">
+      <DependentUpon>UCThongTinLopSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\UCChiTietTKBSVBlank.resx">
+      <DependentUpon>UCChiTietTKBSVBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\UCThongTinSV.resx">
+      <DependentUpon>UCThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Teacher\FThongTinGV.resx">
       <DependentUpon>FThongTinGV.cs</DependentUpon>
@@ -165,6 +222,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compose.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
