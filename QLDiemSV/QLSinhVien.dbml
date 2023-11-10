@@ -244,4 +244,17 @@
     <Parameter Name="MaKhoa" Parameter="maKhoa" Type="System.String" DbType="VarChar(20)" />
     <Return Type="System.String" />
   </Function>
+  <Function Name="dbo.ft_ChkDangNhap" Method="ft_ChkDangNhap" IsComposable="true">
+    <Parameter Name="TK" Parameter="tK" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="MK" Parameter="mK" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Loai" Parameter="loai" Type="System.Int32" DbType="Int" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.ft_ChkQuenMatKhau" Method="ft_ChkQuenMatKhau" IsComposable="true">
+    <Parameter Name="TK" Parameter="tK" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="CCCD" Parameter="cCCD" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Loai" Parameter="loai" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Boolean" />
+  </Function>
 </Database>

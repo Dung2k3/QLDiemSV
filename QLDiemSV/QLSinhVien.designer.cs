@@ -279,6 +279,18 @@ namespace QLDiemSV
 		{
 			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), namHoc, maKhoa).ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ft_ChkDangNhap", IsComposable=true)]
+		public string ft_ChkDangNhap([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TK", DbType="VarChar(100)")] string tK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MK", DbType="VarChar(100)")] string mK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Loai", DbType="Int")] System.Nullable<int> loai)
+		{
+			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tK, mK, loai).ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ft_ChkQuenMatKhau", IsComposable=true)]
+		public System.Nullable<bool> ft_ChkQuenMatKhau([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TK", DbType="VarChar(100)")] string tK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Email", DbType="VarChar(100)")] string email, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CCCD", DbType="VarChar(100)")] string cCCD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Loai", DbType="Int")] System.Nullable<int> loai)
+		{
+			return ((System.Nullable<bool>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tK, email, cCCD, loai).ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CAHOC")]
