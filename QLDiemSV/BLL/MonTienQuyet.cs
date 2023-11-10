@@ -18,9 +18,8 @@ namespace QLDiemSV.BLL
                 db.MONTIENQUYETs.InsertOnSubmit(monTienQuyet);
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
+            catch (SqlException e) { 
+                MessageBox.Show(e.Message); 
             }
         }
 
@@ -33,9 +32,9 @@ namespace QLDiemSV.BLL
                 db.MONTIENQUYETs.DeleteOnSubmit(deleteMonTienQuyet);
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
+            catch (SqlException e) 
+            { 
+                MessageBox.Show(e.Message); 
             }
         }
     }

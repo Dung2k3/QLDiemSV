@@ -18,7 +18,7 @@ namespace QLDiemSV.UI.Teacher
         DateTime today = DateTime.Today;
         GIANGVIEN giangVien = new GIANGVIEN();
         int hk = 1;
-        List<FT_TKBLopGVDangDayResult> listTKB = new List<FT_TKBLopGVDangDayResult>();
+        List<ft_TKBLopGVDangDayResult> listTKB = new List<ft_TKBLopGVDangDayResult>();
         int flag = 0;
         public UCThoiKhoaBieuGV(GIANGVIEN gv)
         {
@@ -46,7 +46,7 @@ namespace QLDiemSV.UI.Teacher
                 for (int i = 2; i < 8; i++)
                 {
                     flag = 0;
-                    foreach (FT_TKBLopGVDangDayResult tkb in listTKB)
+                    foreach (ft_TKBLopGVDangDayResult tkb in listTKB)
                     {
                         if (tkb.MaCa.Equals(j.ToString()) && tkb.Thu == i)
                         {

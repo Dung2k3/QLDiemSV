@@ -19,7 +19,7 @@ namespace QLDiemSV.BLL
                 return db.LOPs.ToList();
             } catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
                 return null;
             }
         }
@@ -44,9 +44,9 @@ namespace QLDiemSV.BLL
                 db.LOPs.InsertOnSubmit(lop);
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
+            catch (SqlException e)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(e.Message);
             }
         }
 
@@ -61,9 +61,9 @@ namespace QLDiemSV.BLL
                 updateLop.HK = lop.HK;
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
+            catch (SqlException e)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(e.Message);
             }
         }
 
@@ -76,9 +76,9 @@ namespace QLDiemSV.BLL
                 db.LOPs.DeleteOnSubmit(deleteLop);
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
+            catch (SqlException e)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(e.Message);
             }
         }
         public List<ft_ThongTinLopTheoHSResult> FindByID_HK_NHvi(string maSV, int hk, int nh)

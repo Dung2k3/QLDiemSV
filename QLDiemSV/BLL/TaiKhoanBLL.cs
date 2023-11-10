@@ -42,9 +42,9 @@ namespace QLDiemSV.BLL
                 db.TAIKHOANs.InsertOnSubmit(taikhoan);
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
+            catch (SqlException e) 
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(e.Message);
             }
         }
 
@@ -57,9 +57,9 @@ namespace QLDiemSV.BLL
                 uptaikhoan.MatKhau = taikhoan.MatKhau;
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
+            catch (SqlException e) 
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(e.Message); 
             }
         }
 
@@ -72,9 +72,9 @@ namespace QLDiemSV.BLL
                 db.TAIKHOANs.DeleteOnSubmit(deltaikhoan);
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
+            catch (SqlException e) 
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(e.Message);
             }
         }
         public string CheckDangNhap(string tk, string mk,int loai)

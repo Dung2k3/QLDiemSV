@@ -12,7 +12,7 @@ namespace QLDiemSV.UI.Student
 {
     public partial class UCChiTietTKBSV : UserControl
     {
-        public UCChiTietTKBSV(FT_TKBSVTheoHKResult tkb)
+        public UCChiTietTKBSV(ft_TKBSVTheoHKResult tkb)
         {
             InitializeComponent();
             lblGV.Text = tkb.TenGV;

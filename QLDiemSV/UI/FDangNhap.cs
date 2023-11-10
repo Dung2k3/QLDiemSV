@@ -1,6 +1,7 @@
 ﻿using QLDiemSV.BLL;
 using QLDiemSV.UI.Student;
 using QLDiemSV.UI.Teacher;
+using QLDiemSV.UI.Admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,9 +39,8 @@ namespace QLDiemSV.UI
                 if ("admin".Equals(ma))
                 {
                     this.Hide();
-                    //FrmQTV frmQTV = new FrmQTV();
-                    //frmQTV.ShowDialog();
-                    MessageBox.Show("Admin");
+                    FAdmin fadmin = new FAdmin();
+                    fadmin.ShowDialog();
                     this.Show();
                     return;
                 }
@@ -53,7 +53,6 @@ namespace QLDiemSV.UI
                     this.Hide();
                     FSinhVien fSV = new FSinhVien(txtTenTaiKhoan.Text);
                     fSV.ShowDialog();
-                    MessageBox.Show("SinhVien" + ma);
                     this.Show();
                     return;
                 }
@@ -66,7 +65,6 @@ namespace QLDiemSV.UI
                     this.Hide();
                     FGiangVien fGV = new FGiangVien(txtTenTaiKhoan.Text);
                     fGV.ShowDialog();
-                    MessageBox.Show("GiangVien" + ma);
                     this.Show();
                     return;
                 }

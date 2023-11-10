@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Routing;
 using System.Windows.Forms;
 
 namespace QLDiemSV.BLL
@@ -28,9 +29,9 @@ namespace QLDiemSV.BLL
                 db.MONHOCs.InsertOnSubmit(monHoc);
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
+            catch (SqlException e)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(e.Message);
             }
         }
         public void UpdateMonHoc(MONHOC monHoc)
@@ -43,9 +44,9 @@ namespace QLDiemSV.BLL
                 updateMonHoc.SoTinChi = monHoc.SoTinChi;
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
+            catch (SqlException e)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(e.Message);
             }
         }
 
@@ -58,9 +59,9 @@ namespace QLDiemSV.BLL
                 db.MONHOCs.DeleteOnSubmit(deleteMonHoc);
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
+            catch (SqlException e)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(e.Message);
             }
         }
     }

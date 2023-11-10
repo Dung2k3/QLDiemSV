@@ -22,7 +22,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
             }
         }
         public void UpdateGiangVien(GIANGVIEN gv)
@@ -45,7 +45,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
             }
         }
         public void DeleteGiangVien(GIANGVIEN gv)
@@ -59,7 +59,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
             }
         }
         public List<GIANGVIEN> FindAllGiangVien()
@@ -75,7 +75,7 @@ namespace QLDiemSV.BLL
                 return db.GIANGVIENs.FirstOrDefault(e => e.MaGV.Equals(maGV));
             } catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
                 return null;
             }
            
@@ -89,20 +89,20 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
                 return null;
             }
         }  
-        public List<FT_TKBLopGVDangDayResult> GetTKBGV(string maGV, int hk, int namHoc)
+        public List<ft_TKBLopGVDangDayResult> GetTKBGV(string maGV, int hk, int namHoc)
         {
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                return db.FT_TKBLopGVDangDay(maGV, hk, namHoc).ToList();
+                return db.ft_TKBLopGVDangDay(maGV, hk, namHoc).ToList();
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
                 return null;
             }
         }
@@ -115,7 +115,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
                 return null;
             }
         }
@@ -131,10 +131,10 @@ namespace QLDiemSV.BLL
             return db.ft_TimGVTheoKhoa(tenKhoa).ToList();
         }
 
-        public List<FT_LayDanhSachLopGiangVienDaDayResult> FindLopGVDay(string maGV)
+        public List<ft_LayDanhSachLopGiangVienDaDayResult> FindLopGVDay(string maGV)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
-            return db.FT_LayDanhSachLopGiangVienDaDay(maGV).ToList();
+            return db.ft_LayDanhSachLopGiangVienDaDay(maGV).ToList();
         }
     }
 }

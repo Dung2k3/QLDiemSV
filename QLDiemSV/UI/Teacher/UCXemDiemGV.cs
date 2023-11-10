@@ -16,7 +16,7 @@ namespace QLDiemSV.UI.Teacher
         GiangVienBLL gvBLL = new GiangVienBLL();
         GIANGVIEN giangVien = new GIANGVIEN();
         List<ft_GVXemDiemResult> listDiem = new List<ft_GVXemDiemResult>();
-        List<FT_TKBLopGVDangDayResult> listLop = new List<FT_TKBLopGVDangDayResult>();
+        List<ft_TKBLopGVDangDayResult> listLop = new List<ft_TKBLopGVDangDayResult>();
         DiemBLL diemBLL = new DiemBLL();
         DateTime date = DateTime.Today;
         int hk = 1;

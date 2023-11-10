@@ -228,7 +228,7 @@
             // 
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::QLDiemSV.Properties.Resources.account__1_;
+            this.guna2CirclePictureBox1.Image = global::QLDiemSV.Properties.Resources.account;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(3, 35);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";

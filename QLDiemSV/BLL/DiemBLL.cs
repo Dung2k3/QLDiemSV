@@ -20,7 +20,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
             }
         }
         public void UpdateDiem(DIEM diem)
@@ -49,7 +49,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
             }
         }
         public List<DIEM> FindAllDiem()
@@ -79,7 +79,6 @@ namespace QLDiemSV.BLL
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             decimal? diem = db.ft_TinhTBTL(maSV);
-
             return (double)(diem.HasValue ? diem.Value : 0);
         }
     }

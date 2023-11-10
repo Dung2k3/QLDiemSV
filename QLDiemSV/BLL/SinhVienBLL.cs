@@ -42,9 +42,9 @@ namespace QLDiemSV.BLL
                 updateSV.TrangThai = sv.TrangThai;
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
+            catch (SqlException e) 
+            { 
+                MessageBox.Show(e.Message); 
             }
         }
         public void Delete(SINHVIEN sv)
@@ -57,9 +57,9 @@ namespace QLDiemSV.BLL
                 db.SINHVIENs.DeleteOnSubmit(deleteSV);
                 db.SubmitChanges();
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
+            catch (SqlException e) 
+            { 
+                MessageBox.Show(e.Message); 
             }
         }
         public SINHVIEN FindByID(string id)
@@ -85,26 +85,26 @@ namespace QLDiemSV.BLL
             return db.vi_ThongTinSVs.ToList();
         }
 
-        public List<FT_LayDanhSachLopSinhVienDaHocCoDiemResult> FindLopSVHoc(string maSV)
+        public List<ft_LayDanhSachLopSinhVienDaHocCoDiemResult> FindLopSVHoc(string maSV)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
-            return db.FT_LayDanhSachLopSinhVienDaHocCoDiem(maSV).ToList();
+            return db.ft_LayDanhSachLopSinhVienDaHocCoDiem(maSV).ToList();
         }
         public vi_ThongTinSV FindByIDvi(string id)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.vi_ThongTinSVs.FirstOrDefault(e => e.MaSV.Equals(id));
         }
-        public List<FT_TKBSVTheoHKResult> LayTKB(string maSV, int hk, int nam)
+        public List<ft_TKBSVTheoHKResult> LayTKB(string maSV, int hk, int nam)
         {
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                return db.FT_TKBSVTheoHK(maSV, hk, nam).ToList();
+                return db.ft_TKBSVTheoHK(maSV, hk, nam).ToList();
             }
-            catch (SqlException ex)
+            catch (SqlException e)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(e.Message);
                 return null;
             }
         }

@@ -20,7 +20,7 @@ namespace QLDiemSV
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
             }
         }
         public void UpdateKhoa(KHOA khoa)
@@ -36,10 +36,10 @@ namespace QLDiemSV
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
             }
         }
-        public void DeleteKhoa(String maKhoa)
+        public void DeleteKhoa(string maKhoa)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace QLDiemSV
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
             }
         }
         public List<KHOA> FindAllKhoa()
@@ -58,7 +58,7 @@ namespace QLDiemSV
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.KHOAs.ToList();
         }
-        public KHOA FindOneByID(String maKhoa)
+        public KHOA FindOneByID(string maKhoa)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.KHOAs.FirstOrDefault(e => e.MaKhoa.Equals(maKhoa));

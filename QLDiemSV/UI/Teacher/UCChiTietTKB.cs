@@ -12,7 +12,7 @@ namespace QLDiemSV.UI.Teacher
 {
     public partial class UCChiTietTKB : UserControl
     {
-        public UCChiTietTKB(FT_TKBLopGVDangDayResult tkb)
+        public UCChiTietTKB(ft_TKBLopGVDangDayResult tkb)
         {
             InitializeComponent();            
             lblMonHoc.Text = tkb.TenMon;

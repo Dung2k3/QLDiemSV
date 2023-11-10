@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace QLDiemSV.BLL
 {
-    internal class CaHoc
+    internal class CaHocBLL
     {
         public List<CAHOC> FindAllCaHoc()
         {

@@ -18,7 +18,7 @@ namespace QLDiemSV.UI.Student
         DateTime today = DateTime.Today;
         SINHVIEN sinhVien = new SINHVIEN();
         int hk = 1;
-        List<FT_TKBSVTheoHKResult> listTKB = new List<FT_TKBSVTheoHKResult>();
+        List<ft_TKBSVTheoHKResult> listTKB = new List<ft_TKBSVTheoHKResult>();
         int flag = 0;
         public UCThoiKhoaBieuSV(SINHVIEN sv)
         {
@@ -52,7 +52,7 @@ namespace QLDiemSV.UI.Student
                 for (int i = 2; i < 8; i++)
                 {
                     flag = 0;
-                    foreach (FT_TKBSVTheoHKResult tkb in listTKB)
+                    foreach (ft_TKBSVTheoHKResult tkb in listTKB)
                     {
                         if (tkb.MaCa.Equals(j.ToString()) && tkb.Thu == i)
                         {
