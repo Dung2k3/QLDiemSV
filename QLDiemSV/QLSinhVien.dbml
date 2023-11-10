@@ -213,6 +213,52 @@
       <Column Name="TBTichLuy" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.vi_taikhoangiangvien" Member="vi_taikhoangiangviens">
+    <Type Name="vi_taikhoangiangvien">
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vi_taikhoansinhvien" Member="vi_taikhoansinhviens">
+    <Type Name="vi_taikhoansinhvien">
+      <Column Name="TensV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vi_DiemSVTheoLop" Member="vi_DiemSVTheoLops">
+    <Type Name="vi_DiemSVTheoLop">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DiemQT" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="DiemCK" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="DiemTB" Type="System.Decimal" DbType="Decimal(9,6)" CanBeNull="true" />
+      <Column Name="QUAMON" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vi_DiemSVTheoMon" Member="vi_DiemSVTheoMons">
+    <Type Name="vi_DiemSVTheoMon">
+      <Column Name="MaSV" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="tenSV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
+      <Column Name="MaMon" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DiemTB" Type="System.Decimal" DbType="Decimal(9,6)" CanBeNull="true" />
+      <Column Name="QUAMON" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vi_LopCaPhong" Member="vi_LopCaPhongs">
+    <Type Name="vi_LopCaPhong">
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MaCa" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaPhong" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="thu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
   <Table Name="dbo.vi_ThongTinLop" Member="vi_ThongTinLops">
     <Type Name="vi_ThongTinLop">
       <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />

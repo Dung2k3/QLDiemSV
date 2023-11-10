@@ -63,5 +63,7 @@ namespace QLDiemSV
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.KHOAs.FirstOrDefault(e => e.MaKhoa.Equals(maKhoa));
         }
+
+        
     }
 }

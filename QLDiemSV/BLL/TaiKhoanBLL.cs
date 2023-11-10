@@ -22,6 +22,18 @@ namespace QLDiemSV.BLL
             return db.TAIKHOANs.FirstOrDefault(tk => tk.TaiKhoan1.Equals(taikhoan));
         }
 
+        public List<vi_taikhoangiangvien> FindTKGV()
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.vi_taikhoangiangviens.ToList();
+        }
+
+        public List<vi_taikhoansinhvien> FindTKSV()
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.vi_taikhoansinhviens.ToList();
+        }
+
         public void Insert(TAIKHOAN taikhoan)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();

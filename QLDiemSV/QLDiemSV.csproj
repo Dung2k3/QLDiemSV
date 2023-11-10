@@ -84,6 +84,78 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLSinhVien.dbml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Admin\FAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\FAdmin.Designer.cs">
+      <DependentUpon>FAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\FInsertGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\FInsertGV.Designer.cs">
+      <DependentUpon>FInsertGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\FInsertLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\FInsertLop.Designer.cs">
+      <DependentUpon>FInsertLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\FInsertSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\FInsertSV.Designer.cs">
+      <DependentUpon>FInsertSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\FUpdateTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\FUpdateTK.Designer.cs">
+      <DependentUpon>FUpdateTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\FUpdateGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\FUpdateGV.Designer.cs">
+      <DependentUpon>FUpdateGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\FUpdateSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\FUpdateSV.Designer.cs">
+      <DependentUpon>FUpdateSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\UCQuanTriDiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\UCQuanTriDiem.Designer.cs">
+      <DependentUpon>UCQuanTriDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\UCQuanTriGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\UCQuanTriGV.Designer.cs">
+      <DependentUpon>UCQuanTriGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\UCQuanTriLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\UCQuanTriLop.Designer.cs">
+      <DependentUpon>UCQuanTriLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\UCQuanTriSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\UCQuanTriSV.Designer.cs">
+      <DependentUpon>UCQuanTriSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\UCQuanTriTK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\UCQuanTriTK.Designer.cs">
+      <DependentUpon>UCQuanTriTK.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +274,42 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Admin\FAdmin.resx">
+      <DependentUpon>FAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\FInsertGV.resx">
+      <DependentUpon>FInsertGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\FInsertLop.resx">
+      <DependentUpon>FInsertLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\FInsertSV.resx">
+      <DependentUpon>FInsertSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\FUpdateTK.resx">
+      <DependentUpon>FUpdateTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\FUpdateGV.resx">
+      <DependentUpon>FUpdateGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\FUpdateSV.resx">
+      <DependentUpon>FUpdateSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\UCQuanTriDiem.resx">
+      <DependentUpon>UCQuanTriDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\UCQuanTriGV.resx">
+      <DependentUpon>UCQuanTriGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\UCQuanTriLop.resx">
+      <DependentUpon>UCQuanTriLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\UCQuanTriSV.resx">
+      <DependentUpon>UCQuanTriSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\UCQuanTriTK.resx">
+      <DependentUpon>UCQuanTriTK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FMessageBox.resx">
       <DependentUpon>FMessageBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +390,26 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\blackboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dust.png" />
+  </ItemGroup>
     <Folder Include="UI\Admin\" />
   </ItemGroup>
   <ItemGroup>

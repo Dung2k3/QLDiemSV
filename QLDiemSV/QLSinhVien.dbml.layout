@@ -248,5 +248,35 @@
         <elementListCompartment Id="367eaf7d-afaf-4842-9d9c-1daad729dcf5" absoluteBounds="3.8899999999999997, 11.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="de96bb27-501c-4fb9-809f-676ad0ee8248" absoluteBounds="5, 2.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLSinhVienDataContext/vi_taikhoangiangvien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8fb3b005-bfbe-4d20-9794-e930b16f7eff" absoluteBounds="5.015, 2.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ce49bcca-9955-4f97-b3b6-0c94b15494ce" absoluteBounds="5, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLSinhVienDataContext/vi_taikhoansinhvien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72bbb0e7-6b8b-4983-9a97-8b810f3bf01b" absoluteBounds="5.015, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a424811-ea25-461f-bc06-7b918fedfeb2" absoluteBounds="2.75, 2.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/QLSinhVienDataContext/vi_DiemSVTheoLop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9323da32-b309-45a5-99b8-447584a27b79" absoluteBounds="2.7649999999999997, 2.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="27629da4-937e-4fda-b8f2-3a88afc54f3d" absoluteBounds="0.5, 2.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/QLSinhVienDataContext/vi_DiemSVTheoMon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="417c032b-b154-4361-8faa-f231fcc9677f" absoluteBounds="0.51500000000000012, 3.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3cb61012-7e71-461a-9c22-8e27b99526dd" absoluteBounds="7.125, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLSinhVienDataContext/vi_LopCaPhong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea0bff74-1f44-467c-9e27-4fdbabf448df" absoluteBounds="7.14, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

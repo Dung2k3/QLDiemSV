@@ -35,7 +35,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(e.Message);
             }
         }
         public void DeleteDiem(DIEM diem)
@@ -56,6 +56,24 @@ namespace QLDiemSV.BLL
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.DIEMs.ToList();
+        }
+
+        public DIEM FindDiemByID(string maSV, string maLop)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.DIEMs.FirstOrDefault(e => e.MaSV.Equals(maSV) && e.MaLop.Equals(maLop));
+        }
+
+        public List<vi_DiemSVTheoLop> FindDiemSVTheoLop()
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.vi_DiemSVTheoLops.ToList();
+        }
+
+        public List<vi_DiemSVTheoMon> FindDiemSVTheoMon()
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.vi_DiemSVTheoMons.ToList();
         }
         public double TinhDiemTBTichLuy(string maSV)
         {

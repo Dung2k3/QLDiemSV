@@ -255,6 +255,45 @@ namespace QLDiemSV
 				return this.GetTable<vi_ThongTinLop>();
 			}
 		}
+		public System.Data.Linq.Table<vi_taikhoangiangvien> vi_taikhoangiangviens
+		{
+			get
+			{
+				return this.GetTable<vi_taikhoangiangvien>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vi_taikhoansinhvien> vi_taikhoansinhviens
+		{
+			get
+			{
+				return this.GetTable<vi_taikhoansinhvien>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vi_DiemSVTheoLop> vi_DiemSVTheoLops
+		{
+			get
+			{
+				return this.GetTable<vi_DiemSVTheoLop>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vi_DiemSVTheoMon> vi_DiemSVTheoMons
+		{
+			get
+			{
+				return this.GetTable<vi_DiemSVTheoMon>();
+			}
+		}
+		
+		public System.Data.Linq.Table<vi_LopCaPhong> vi_LopCaPhongs
+		{
+			get
+			{
+				return this.GetTable<vi_LopCaPhong>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CAHOC")]
@@ -4567,6 +4606,519 @@ namespace QLDiemSV
 				if ((this._TenGV != value))
 				{
 					this._TenGV = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vi_taikhoangiangvien")]
+	public partial class vi_taikhoangiangvien
+	{
+		
+		private string _TenGV;
+		
+		private string _TaiKhoan;
+		
+		private string _MatKhau;
+		
+		private System.Nullable<bool> _TrangThai;
+		
+		public vi_taikhoangiangvien()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenGV", DbType="NVarChar(302) NOT NULL", CanBeNull=false)]
+		public string TenGV
+		{
+			get
+			{
+				return this._TenGV;
+			}
+			set
+			{
+				if ((this._TenGV != value))
+				{
+					this._TenGV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaiKhoan", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string TaiKhoan
+		{
+			get
+			{
+				return this._TaiKhoan;
+			}
+			set
+			{
+				if ((this._TaiKhoan != value))
+				{
+					this._TaiKhoan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhau", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string MatKhau
+		{
+			get
+			{
+				return this._MatKhau;
+			}
+			set
+			{
+				if ((this._MatKhau != value))
+				{
+					this._MatKhau = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThai", DbType="Bit")]
+		public System.Nullable<bool> TrangThai
+		{
+			get
+			{
+				return this._TrangThai;
+			}
+			set
+			{
+				if ((this._TrangThai != value))
+				{
+					this._TrangThai = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vi_taikhoansinhvien")]
+	public partial class vi_taikhoansinhvien
+	{
+		
+		private string _TensV;
+		
+		private string _TaiKhoan;
+		
+		private string _MatKhau;
+		
+		private bool _TrangThai;
+		
+		public vi_taikhoansinhvien()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TensV", DbType="NVarChar(302) NOT NULL", CanBeNull=false)]
+		public string TensV
+		{
+			get
+			{
+				return this._TensV;
+			}
+			set
+			{
+				if ((this._TensV != value))
+				{
+					this._TensV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TaiKhoan", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string TaiKhoan
+		{
+			get
+			{
+				return this._TaiKhoan;
+			}
+			set
+			{
+				if ((this._TaiKhoan != value))
+				{
+					this._TaiKhoan = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MatKhau", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string MatKhau
+		{
+			get
+			{
+				return this._MatKhau;
+			}
+			set
+			{
+				if ((this._MatKhau != value))
+				{
+					this._MatKhau = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThai", DbType="Bit NOT NULL")]
+		public bool TrangThai
+		{
+			get
+			{
+				return this._TrangThai;
+			}
+			set
+			{
+				if ((this._TrangThai != value))
+				{
+					this._TrangThai = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vi_DiemSVTheoLop")]
+	public partial class vi_DiemSVTheoLop
+	{
+		
+		private string _MaSV;
+		
+		private string _tenSV;
+		
+		private string _MaLop;
+		
+		private string _TenLop;
+		
+		private System.Nullable<decimal> _DiemQT;
+		
+		private System.Nullable<decimal> _DiemCK;
+		
+		private System.Nullable<decimal> _DiemTB;
+		
+		private int _QUAMON;
+		
+		public vi_DiemSVTheoLop()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSV", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaSV
+		{
+			get
+			{
+				return this._MaSV;
+			}
+			set
+			{
+				if ((this._MaSV != value))
+				{
+					this._MaSV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenSV", DbType="NVarChar(302) NOT NULL", CanBeNull=false)]
+		public string tenSV
+		{
+			get
+			{
+				return this._tenSV;
+			}
+			set
+			{
+				if ((this._tenSV != value))
+				{
+					this._tenSV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLop", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaLop
+		{
+			get
+			{
+				return this._MaLop;
+			}
+			set
+			{
+				if ((this._MaLop != value))
+				{
+					this._MaLop = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenLop", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string TenLop
+		{
+			get
+			{
+				return this._TenLop;
+			}
+			set
+			{
+				if ((this._TenLop != value))
+				{
+					this._TenLop = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiemQT", DbType="Decimal(4,2)")]
+		public System.Nullable<decimal> DiemQT
+		{
+			get
+			{
+				return this._DiemQT;
+			}
+			set
+			{
+				if ((this._DiemQT != value))
+				{
+					this._DiemQT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiemCK", DbType="Decimal(4,2)")]
+		public System.Nullable<decimal> DiemCK
+		{
+			get
+			{
+				return this._DiemCK;
+			}
+			set
+			{
+				if ((this._DiemCK != value))
+				{
+					this._DiemCK = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiemTB", DbType="Decimal(9,6)")]
+		public System.Nullable<decimal> DiemTB
+		{
+			get
+			{
+				return this._DiemTB;
+			}
+			set
+			{
+				if ((this._DiemTB != value))
+				{
+					this._DiemTB = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QUAMON", DbType="Int NOT NULL")]
+		public int QUAMON
+		{
+			get
+			{
+				return this._QUAMON;
+			}
+			set
+			{
+				if ((this._QUAMON != value))
+				{
+					this._QUAMON = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vi_DiemSVTheoMon")]
+	public partial class vi_DiemSVTheoMon
+	{
+		
+		private string _MaSV;
+		
+		private string _tenSV;
+		
+		private string _MaMon;
+		
+		private string _TenMon;
+		
+		private System.Nullable<decimal> _DiemTB;
+		
+		private int _QUAMON;
+		
+		public vi_DiemSVTheoMon()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSV", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaSV
+		{
+			get
+			{
+				return this._MaSV;
+			}
+			set
+			{
+				if ((this._MaSV != value))
+				{
+					this._MaSV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenSV", DbType="NVarChar(302) NOT NULL", CanBeNull=false)]
+		public string tenSV
+		{
+			get
+			{
+				return this._tenSV;
+			}
+			set
+			{
+				if ((this._tenSV != value))
+				{
+					this._tenSV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaMon", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaMon
+		{
+			get
+			{
+				return this._MaMon;
+			}
+			set
+			{
+				if ((this._MaMon != value))
+				{
+					this._MaMon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenMon", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string TenMon
+		{
+			get
+			{
+				return this._TenMon;
+			}
+			set
+			{
+				if ((this._TenMon != value))
+				{
+					this._TenMon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiemTB", DbType="Decimal(9,6)")]
+		public System.Nullable<decimal> DiemTB
+		{
+			get
+			{
+				return this._DiemTB;
+			}
+			set
+			{
+				if ((this._DiemTB != value))
+				{
+					this._DiemTB = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QUAMON", DbType="Int NOT NULL")]
+		public int QUAMON
+		{
+			get
+			{
+				return this._QUAMON;
+			}
+			set
+			{
+				if ((this._QUAMON != value))
+				{
+					this._QUAMON = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vi_LopCaPhong")]
+	public partial class vi_LopCaPhong
+	{
+		
+		private string _TenLop;
+		
+		private string _MaCa;
+		
+		private string _MaPhong;
+		
+		private int _thu;
+		
+		public vi_LopCaPhong()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenLop", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string TenLop
+		{
+			get
+			{
+				return this._TenLop;
+			}
+			set
+			{
+				if ((this._TenLop != value))
+				{
+					this._TenLop = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCa", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaCa
+		{
+			get
+			{
+				return this._MaCa;
+			}
+			set
+			{
+				if ((this._MaCa != value))
+				{
+					this._MaCa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaPhong", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaPhong
+		{
+			get
+			{
+				return this._MaPhong;
+			}
+			set
+			{
+				if ((this._MaPhong != value))
+				{
+					this._MaPhong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thu", DbType="Int NOT NULL")]
+		public int thu
+		{
+			get
+			{
+				return this._thu;
+			}
+			set
+			{
+				if ((this._thu != value))
+				{
+					this._thu = value;
 				}
 			}
 		}

@@ -65,7 +65,7 @@ namespace QLDiemSV.BLL
         public List<GIANGVIEN> FindAllGiangVien()
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
-           return db.GIANGVIENs.ToList();
+            return db.GIANGVIENs.ToList();
         }
         public GIANGVIEN FindGiangVienByID(string maGV)
         {
@@ -118,6 +118,23 @@ namespace QLDiemSV.BLL
                 MessageBox.Show(e.ToString());
                 return null;
             }
+        }
+        public List<vi_ThongTinGV> FindAllThongTinGV()
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.vi_ThongTinGVs.ToList();
+        }
+
+        public List<ft_TimGVTheoKhoaResult> FindThongTinGiangVienByMaKhoa(string tenKhoa)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.ft_TimGVTheoKhoa(tenKhoa).ToList();
+        }
+
+        public List<FT_LayDanhSachLopGiangVienDaDayResult> FindLopGVDay(string maGV)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.FT_LayDanhSachLopGiangVienDaDay(maGV).ToList();
         }
     }
 }
