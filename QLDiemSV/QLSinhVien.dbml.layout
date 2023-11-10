@@ -205,7 +205,7 @@
         <classShapeMoniker Id="697522ec-2b35-4b75-a55e-d867f6f5f470" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 7.06814697265625); (3.25 : 7.06814697265625); (3.25 : 5.625); (4.41666666666667 : 5.625 : JumpStart); (4.58333333333333 : 5.625 : JumpEnd); (7.76041666666667 : 5.625 : JumpStart); (7.92708333333333 : 5.625 : JumpEnd); (9.968748 : 5.625); (9.968748 : 5.37660970052083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 7.06814697265625); (3.25 : 7.06814697265625); (3.25 : 5.625); (4.41666666666667 : 5.625 : JumpStart); (4.58333333333333 : 5.625 : JumpEnd); (9.968748 : 5.625); (9.968748 : 5.37660970052083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QLSinhVienDataContext/TAIKHOAN/TAIKHOAN_SINHVIEN" />
       <nodes>
         <classShapeMoniker Id="3ea6650b-f611-4813-9b2c-2bd3a385791c" />
