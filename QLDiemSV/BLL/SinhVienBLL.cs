@@ -67,7 +67,7 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.SINHVIENs.FirstOrDefault(e => e.MaSV.Equals(id));
         }
-        public List<SINHVIEN> FindAll(string id)
+        public List<SINHVIEN> FindAll()
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.SINHVIENs.ToList();

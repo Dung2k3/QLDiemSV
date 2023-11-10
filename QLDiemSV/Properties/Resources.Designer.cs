@@ -63,6 +63,7 @@ namespace QLDiemSV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap account__1_ {
             get {
                 object obj = ResourceManager.GetObject("account (1)", resourceCulture);
@@ -156,6 +157,12 @@ namespace QLDiemSV.Properties {
         internal static System.Drawing.Bitmap score {
             get {
                 object obj = ResourceManager.GetObject("score", resourceCulture);
+                }
+        }   
+        internal static System.Drawing.Bitmap Artboard_1_4x3 {
+            get {
+                object obj = ResourceManager.GetObject("Artboard 1@4x3", resourceCulture);
+                }
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

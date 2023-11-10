@@ -78,6 +78,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLSinhVien.dbml</DependentUpon>
     </Compile>
+    <Compile Include="UI\FDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FDangNhap.Designer.cs">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FQuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FQuenMatKhau.Designer.cs">
+      <DependentUpon>FQuenMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Student\FSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +154,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\FDangNhap.resx">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FQuenMatKhau.resx">
+      <DependentUpon>FQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Student\FSinhVien.resx">
       <DependentUpon>FSinhVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +216,7 @@
     <Folder Include="UI\Admin\" />
   </ItemGroup>
   <ItemGroup>
+
     <None Include="Resources\Logo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +233,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\compose.png" />
+</ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1%404x3.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

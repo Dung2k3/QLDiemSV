@@ -280,6 +280,7 @@ namespace QLDiemSV
 			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), namHoc, maKhoa).ReturnValue));
 		}
 		
+
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FT_TKBLopGVDangDay", IsComposable=true)]
 		public IQueryable<FT_TKBLopGVDangDayResult> FT_TKBLopGVDangDay([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaGV", DbType="VarChar(20)")] string maGV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HK", DbType="Int")] System.Nullable<int> hK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NamHoc", DbType="Int")] System.Nullable<int> namHoc)
 		{
@@ -290,6 +291,18 @@ namespace QLDiemSV
 		public IQueryable<FT_GVXemDiemResult> FT_GVXemDiem([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaGV", DbType="VarChar(20)")] string maGV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaLop", DbType="VarChar(20)")] string maLop)
 		{
 			return this.CreateMethodCallQuery<FT_GVXemDiemResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGV, maLop);
+    }
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ft_ChkDangNhap", IsComposable=true)]
+		public string ft_ChkDangNhap([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TK", DbType="VarChar(100)")] string tK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MK", DbType="VarChar(100)")] string mK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Loai", DbType="Int")] System.Nullable<int> loai)
+		{
+			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tK, mK, loai).ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ft_ChkQuenMatKhau", IsComposable=true)]
+		public System.Nullable<bool> ft_ChkQuenMatKhau([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TK", DbType="VarChar(100)")] string tK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Email", DbType="VarChar(100)")] string email, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CCCD", DbType="VarChar(100)")] string cCCD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Loai", DbType="Int")] System.Nullable<int> loai)
+		{
+			return ((System.Nullable<bool>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tK, email, cCCD, loai).ReturnValue));
+
 		}
 	}
 	
