@@ -72,5 +72,23 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.SINHVIENs.ToList();
         }
+        public vi_ThongTinSV FindByIDvi(string id)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.vi_ThongTinSVs.FirstOrDefault(e => e.MaSV.Equals(id));
+        }
+        public List<FT_TKBSVTheoHKResult> LayTKB(string maSV, int hk, int nam)
+        {
+            try
+            {
+                QLSinhVienDataContext db = new QLSinhVienDataContext();
+                return db.FT_TKBSVTheoHK(maSV, hk, nam).ToList();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }
     }
 }

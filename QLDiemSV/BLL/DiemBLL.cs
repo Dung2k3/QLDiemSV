@@ -57,6 +57,13 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.DIEMs.ToList();
         }
+        public double TinhDiemTBTichLuy(string maSV)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            decimal? diem = db.ft_TinhTBTL(maSV);
+
+            return (double)(diem.HasValue ? diem.Value : 0);
+        }
     }
 
 }

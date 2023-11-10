@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLDiemSV.UI.Teacher;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -73,6 +74,11 @@ namespace QLDiemSV.BLL
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+        public List<FT_ThongTinLopTheoHSResult> FindByID_HK_NHvi(string maSV, int hk, int nh)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.FT_ThongTinLopTheoHS(maSV,hk,nh).ToList();
         }
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLDiemSV.UI.Student
+namespace QLDiemSV.UI.Teacher
 {
-    public partial class FThongTin : Form
+    public partial class FThongTinGV : Form
     {
-        public FThongTin()
+        public FThongTinGV()
         {
             InitializeComponent();
         }
