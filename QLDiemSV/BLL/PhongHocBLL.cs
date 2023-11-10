@@ -8,7 +8,7 @@ namespace QLDiemSV.BLL
 {
     internal class PhongHocBLL
     {
-        public List<PHONGHOC> FindAll(TAIKHOAN tk)
+        public List<PHONGHOC> FindAll()
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.PHONGHOCs.ToList();

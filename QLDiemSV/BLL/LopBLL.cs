@@ -22,6 +22,12 @@ namespace QLDiemSV.BLL
             return db.LOPs.FirstOrDefault(e=>e.Equals(maLop));
         }
 
+        public List<vi_ThongTinLop> FindAllThongTinLop()
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.vi_ThongTinLops.ToList();
+        }
+
         public void InsertLop(LOP lop)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
@@ -67,5 +73,6 @@ namespace QLDiemSV.BLL
                 MessageBox.Show(ex.ToString());
             }
         }
+
     }
 }

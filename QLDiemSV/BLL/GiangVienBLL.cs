@@ -34,13 +34,11 @@ namespace QLDiemSV.BLL
                 giangVienUpdate.HoGV = gv.HoGV;
                 giangVienUpdate.TenlotGV = gv.TenlotGV;
                 giangVienUpdate.TenGV = gv.TenlotGV;
-                giangVienUpdate.KHOA = gv.KHOA;
                 giangVienUpdate.DiaChi = gv.DiaChi;
                 giangVienUpdate.CCCD = gv.CCCD;
                 giangVienUpdate.Email = gv.Email;
                 giangVienUpdate.SDT = gv.SDT;
                 giangVienUpdate.Gioitinh = gv.Gioitinh;
-                giangVienUpdate.LOAIGV = gv.LOAIGV;
                 giangVienUpdate.MaKhoa = gv.MaKhoa;
                 giangVienUpdate.MaLoaiGV = gv.MaLoaiGV;
                 db.SubmitChanges();
@@ -67,12 +65,29 @@ namespace QLDiemSV.BLL
         public List<GIANGVIEN> FindAllGiangVien()
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
-           return db.GIANGVIENs.ToList();
+            return db.GIANGVIENs.ToList();
         }
         public GIANGVIEN FindGiangVienByID(string maGV)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.GIANGVIENs.FirstOrDefault(e => e.MaGV.Equals(maGV));
+        }
+        public List<vi_ThongTinGV> FindAllThongTinGV()
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.vi_ThongTinGVs.ToList();
+        }
+
+        public List<ft_TimGVTheoKhoaResult> FindThongTinGiangVienByMaKhoa(string tenKhoa)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.ft_TimGVTheoKhoa(tenKhoa).ToList();
+        }
+
+        public List<FT_LayDanhSachLopGiangVienDaDayResult> FindLopGVDay(string maGV)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.FT_LayDanhSachLopGiangVienDaDay(maGV).ToList();
         }
     }
 }
