@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+    Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -33,10 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+    <Reference
+      Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.Charts.WinForms.1.0.9\lib\net48\Guna.Charts.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+    <Reference
+      Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.5\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -146,7 +149,7 @@
     </Compile>
     <Compile Include="UI\Teacher\FThongTinGV.Designer.cs">
       <DependentUpon>FThongTinGV.cs</DependentUpon>
-     </Compile>
+    </Compile>
     <Compile Include="UI\Teacher\FCapNhatThongTinGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,9 +319,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\compose.png" />
-    </ItemGroup>
-    <None Include="Resources\compose.png" />
-</ItemGroup>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Artboard 1%404x3.png" />
   </ItemGroup>

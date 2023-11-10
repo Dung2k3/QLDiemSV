@@ -106,12 +106,12 @@ namespace QLDiemSV.BLL
                 return null;
             }
         }
-        public List<FT_GVXemDiemResult> GVXemDiem(string maGV,string maLop)
+        public List<ft_GVXemDiemResult> GVXemDiem(string maGV,string maLop)
         {
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                return  db.FT_GVXemDiem(maGV,maLop).ToList();
+                return  db.ft_GVXemDiem(maGV,maLop).ToList();
             }
             catch (SqlException e)
             {

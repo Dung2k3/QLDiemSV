@@ -255,72 +255,6 @@ namespace QLDiemSV
 				return this.GetTable<vi_ThongTinLop>();
 			}
 		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChkEmail", IsComposable=true)]
-		public System.Nullable<bool> ChkEmail([global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="VarChar(100)")] string eMAIL)
-		{
-			return ((System.Nullable<bool>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), eMAIL).ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ft_TaoMaGV", IsComposable=true)]
-		public string ft_TaoMaGV([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoa", DbType="VarChar(20)")] string maKhoa)
-		{
-			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maKhoa).ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ft_TaoMaLop", IsComposable=true)]
-		public string ft_TaoMaLop([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaMon", DbType="VarChar(20)")] string maMon, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NamHoc", DbType="Int")] System.Nullable<int> namHoc)
-		{
-			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maMon, namHoc).ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ft_TaoMaSV", IsComposable=true)]
-		public string ft_TaoMaSV([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NamHoc", DbType="Int")] System.Nullable<int> namHoc, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaKhoa", DbType="VarChar(20)")] string maKhoa)
-		{
-			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), namHoc, maKhoa).ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FT_ThongTinLopTheoHS", IsComposable=true)]
-		public IQueryable<FT_ThongTinLopTheoHSResult> FT_ThongTinLopTheoHS([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaSV", DbType="VarChar(20)")] string maSV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HK", DbType="Int")] System.Nullable<int> hK, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> namhoc)
-		{
-			return this.CreateMethodCallQuery<FT_ThongTinLopTheoHSResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV, hK, namhoc);
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ft_TinhTBTL", IsComposable=true)]
-		public System.Nullable<decimal> ft_TinhTBTL([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaSV", DbType="VarChar(20)")] string maSV)
-		{
-			return ((System.Nullable<decimal>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV).ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FT_TKBSVTheoHK", IsComposable=true)]
-		public IQueryable<FT_TKBSVTheoHKResult> FT_TKBSVTheoHK([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaSV", DbType="VarChar(20)")] string maSV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HK", DbType="Int")] System.Nullable<int> hK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NamHoc", DbType="Int")] System.Nullable<int> namHoc)
-		{
-			return this.CreateMethodCallQuery<FT_TKBSVTheoHKResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV, hK, namHoc);
-    }
-
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FT_TKBLopGVDangDay", IsComposable=true)]
-		public IQueryable<FT_TKBLopGVDangDayResult> FT_TKBLopGVDangDay([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaGV", DbType="VarChar(20)")] string maGV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="HK", DbType="Int")] System.Nullable<int> hK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NamHoc", DbType="Int")] System.Nullable<int> namHoc)
-		{
-			return this.CreateMethodCallQuery<FT_TKBLopGVDangDayResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGV, hK, namHoc);
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FT_GVXemDiem", IsComposable=true)]
-		public IQueryable<FT_GVXemDiemResult> FT_GVXemDiem([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaGV", DbType="VarChar(20)")] string maGV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaLop", DbType="VarChar(20)")] string maLop)
-		{
-			return this.CreateMethodCallQuery<FT_GVXemDiemResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maGV, maLop);
-    }
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ft_ChkDangNhap", IsComposable=true)]
-		public string ft_ChkDangNhap([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TK", DbType="VarChar(100)")] string tK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MK", DbType="VarChar(100)")] string mK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Loai", DbType="Int")] System.Nullable<int> loai)
-		{
-			return ((string)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tK, mK, loai).ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ft_ChkQuenMatKhau", IsComposable=true)]
-		public System.Nullable<bool> ft_ChkQuenMatKhau([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TK", DbType="VarChar(100)")] string tK, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Email", DbType="VarChar(100)")] string email, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CCCD", DbType="VarChar(100)")] string cCCD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Loai", DbType="Int")] System.Nullable<int> loai)
-		{
-			return ((System.Nullable<bool>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tK, email, cCCD, loai).ReturnValue));
-
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CAHOC")]
@@ -4448,4 +4382,194 @@ namespace QLDiemSV
 			}
 		}
 	}
- }
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vi_ThongTinLop")]
+	public partial class vi_ThongTinLop
+	{
+		
+		private string _MaLop;
+		
+		private string _TenLop;
+		
+		private string _TenMon;
+		
+		private string _LoaiLop;
+		
+		private System.Nullable<int> _SoLuongSV;
+		
+		private int _SoLuongMax;
+		
+		private int _HocKy;
+		
+		private int _SoTinChi;
+		
+		private string _NamHoc;
+		
+		private string _TenGV;
+		
+		public vi_ThongTinLop()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLop", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string MaLop
+		{
+			get
+			{
+				return this._MaLop;
+			}
+			set
+			{
+				if ((this._MaLop != value))
+				{
+					this._MaLop = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenLop", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string TenLop
+		{
+			get
+			{
+				return this._TenLop;
+			}
+			set
+			{
+				if ((this._TenLop != value))
+				{
+					this._TenLop = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenMon", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string TenMon
+		{
+			get
+			{
+				return this._TenMon;
+			}
+			set
+			{
+				if ((this._TenMon != value))
+				{
+					this._TenMon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LoaiLop", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string LoaiLop
+		{
+			get
+			{
+				return this._LoaiLop;
+			}
+			set
+			{
+				if ((this._LoaiLop != value))
+				{
+					this._LoaiLop = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuongSV", DbType="Int")]
+		public System.Nullable<int> SoLuongSV
+		{
+			get
+			{
+				return this._SoLuongSV;
+			}
+			set
+			{
+				if ((this._SoLuongSV != value))
+				{
+					this._SoLuongSV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuongMax", DbType="Int NOT NULL")]
+		public int SoLuongMax
+		{
+			get
+			{
+				return this._SoLuongMax;
+			}
+			set
+			{
+				if ((this._SoLuongMax != value))
+				{
+					this._SoLuongMax = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HocKy", DbType="Int NOT NULL")]
+		public int HocKy
+		{
+			get
+			{
+				return this._HocKy;
+			}
+			set
+			{
+				if ((this._HocKy != value))
+				{
+					this._HocKy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoTinChi", DbType="Int NOT NULL")]
+		public int SoTinChi
+		{
+			get
+			{
+				return this._SoTinChi;
+			}
+			set
+			{
+				if ((this._SoTinChi != value))
+				{
+					this._SoTinChi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NamHoc", DbType="VarChar(115) NOT NULL", CanBeNull=false)]
+		public string NamHoc
+		{
+			get
+			{
+				return this._NamHoc;
+			}
+			set
+			{
+				if ((this._NamHoc != value))
+				{
+					this._NamHoc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenGV", DbType="NVarChar(302) NOT NULL", CanBeNull=false)]
+		public string TenGV
+		{
+			get
+			{
+				return this._TenGV;
+			}
+			set
+			{
+				if ((this._TenGV != value))
+				{
+					this._TenGV = value;
+				}
+			}
+		}
+	}
+}
+#pragma warning restore 1591

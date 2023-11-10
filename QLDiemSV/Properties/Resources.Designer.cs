@@ -63,11 +63,14 @@ namespace QLDiemSV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap classroom {
-            get {
+        internal static System.Drawing.Bitmap classroom
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("classroom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
+        }
 
         internal static System.Drawing.Bitmap account__1_ {
             get {
@@ -149,11 +152,14 @@ namespace QLDiemSV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap question {
-            get {
+        internal static System.Drawing.Bitmap question
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("question", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
+        }
         internal static System.Drawing.Bitmap sách_ {
             get {
                 object obj = ResourceManager.GetObject("sách ", resourceCulture);

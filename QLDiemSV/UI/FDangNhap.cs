@@ -51,8 +51,8 @@ namespace QLDiemSV.UI
                 if (ma != null)
                 {
                     this.Hide();
-                    // frmQTV_HV = new FrmHV(txtTenTaiKhoan.Text);
-                   // frmQTV_HV.ShowDialog();
+                    FSinhVien fSV = new FSinhVien(txtTenTaiKhoan.Text);
+                    fSV.ShowDialog();
                     MessageBox.Show("SinhVien" + ma);
                     this.Show();
                     return;
@@ -64,8 +64,8 @@ namespace QLDiemSV.UI
                 if (ma != null)
                 {
                     this.Hide();
-                    FGiangVien frmQTV_HV = new FGiangVien(txtTenTaiKhoan.Text);
-                    frmQTV_HV.ShowDialog();
+                    FGiangVien fGV = new FGiangVien(txtTenTaiKhoan.Text);
+                    fGV.ShowDialog();
                     MessageBox.Show("GiangVien" + ma);
                     this.Show();
                     return;

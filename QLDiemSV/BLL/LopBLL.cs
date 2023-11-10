@@ -75,10 +75,10 @@ namespace QLDiemSV.BLL
                 MessageBox.Show(ex.ToString());
             }
         }
-        public List<FT_ThongTinLopTheoHSResult> FindByID_HK_NHvi(string maSV, int hk, int nh)
+        public List<ft_ThongTinLopTheoHSResult> FindByID_HK_NHvi(string maSV, int hk, int nh)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
-            return db.FT_ThongTinLopTheoHS(maSV,hk,nh).ToList();
+            return db.ft_ThongTinLopTheoHS(maSV,hk,nh).ToList();
         }
     }
 }
