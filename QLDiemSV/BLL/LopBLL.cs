@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLDiemSV.UI.Teacher;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -12,8 +13,15 @@ namespace QLDiemSV.BLL
     {
         public List<LOP> FindAllLop()
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
-            return db.LOPs.ToList();
+            try
+            {
+                QLSinhVienDataContext db = new QLSinhVienDataContext();
+                return db.LOPs.ToList();
+            } catch (SqlException e)
+            {
+                MessageBox.Show(e.ToString());
+                return null;
+            }
         }
 
         public LOP FindByID(string maLop)
@@ -73,6 +81,10 @@ namespace QLDiemSV.BLL
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        public List<ft_ThongTinLopTheoHSResult> FindByID_HK_NHvi(string maSV, int hk, int nh)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.ft_ThongTinLopTheoHS(maSV,hk,nh).ToList();
+        }
     }
 }

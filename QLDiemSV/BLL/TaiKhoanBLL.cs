@@ -77,5 +77,15 @@ namespace QLDiemSV.BLL
                 MessageBox.Show(ex.ToString());
             }
         }
+        public string CheckDangNhap(string tk, string mk,int loai)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.ft_ChkDangNhap(tk, mk, loai);
+        }
+        public bool CheckQuenMK(string tk, string email, string cccd, int loai)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return (bool)db.ft_ChkQuenMatKhau(tk, email, cccd, loai);   
+        }
     }
 }

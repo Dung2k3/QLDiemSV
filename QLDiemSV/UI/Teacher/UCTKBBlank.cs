@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLDiemSV.UI.Teacher
 {
-    public partial class FThongTinGiangVien : Form
+    public partial class UCTKBBlank : UserControl
     {
-        public FThongTinGiangVien()
+        public UCTKBBlank()
         {
             InitializeComponent();
         }

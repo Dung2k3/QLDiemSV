@@ -8,13 +8,13 @@ namespace QLDiemSV.BLL
 {
     internal class LoaiLopBLL
     {
-        public List<LOAILOP> FindAll(TAIKHOAN tk)
+        public List<LOAILOP> FindAll()
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.LOAILOPs.ToList();
         }
 
-        public LOAILOP FindByID(String maLoaiLop)
+        public LOAILOP FindByID(string maLoaiLop)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.LOAILOPs.FirstOrDefault(ll => ll.MaLoaiLop.Equals(maLoaiLop));

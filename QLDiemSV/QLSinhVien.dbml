@@ -197,19 +197,6 @@
       <Column Name="TaiKhoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.vi_ThongTinLop" Member="vi_ThongTinLops">
-    <Type Name="vi_ThongTinLop">
-      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="TenLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="TenMon" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="SoLuongSV" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SoLuongMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="HocKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="NamHoc" Type="System.String" DbType="VarChar(115) NOT NULL" CanBeNull="false" />
-      <Column Name="TenGV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.vi_ThongTinSV" Member="vi_ThongTinSVs">
     <Type Name="vi_ThongTinSV">
       <Column Name="MaSV" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
@@ -270,6 +257,20 @@
       <Column Name="MaCa" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="MaPhong" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="thu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vi_ThongTinLop" Member="vi_ThongTinLops">
+    <Type Name="vi_ThongTinLop">
+      <Column Name="MaLop" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMon" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LoaiLop" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuongSV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLuongMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTinChi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NamHoc" Type="System.String" DbType="VarChar(115) NOT NULL" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(302) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>
