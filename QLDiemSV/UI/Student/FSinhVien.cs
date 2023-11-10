@@ -41,5 +41,10 @@ namespace QLDiemSV.UI.Student
         {
 
         }
+
+        private void guna2ControlBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

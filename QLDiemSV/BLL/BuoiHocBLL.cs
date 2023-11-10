@@ -43,5 +43,6 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.BUOIHOCs.ToList();
         }
+        
     }
 }
