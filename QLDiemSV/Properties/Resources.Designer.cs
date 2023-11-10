@@ -157,14 +157,15 @@ namespace QLDiemSV.Properties {
         internal static System.Drawing.Bitmap score {
             get {
                 object obj = ResourceManager.GetObject("score", resourceCulture);
-                }
+                return ((System.Drawing.Bitmap)(obj));
+            }
         }   
         internal static System.Drawing.Bitmap Artboard_1_4x3 {
             get {
                 object obj = ResourceManager.GetObject("Artboard 1@4x3", resourceCulture);
-                }
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
 }
+

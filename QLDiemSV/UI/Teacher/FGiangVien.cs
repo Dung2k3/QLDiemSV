@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace QLDiemSV.UI.Teacher
@@ -16,9 +17,11 @@ namespace QLDiemSV.UI.Teacher
     {
         public Form currentFormChild;
         GiangVienBLL gvBLL = new GiangVienBLL();
-        public FGiangVien()
+        GIANGVIEN giangVien = new GIANGVIEN();
+        public FGiangVien(string maGV)
         {
             InitializeComponent();
+            giangVien = gvBLL.FindGiangVienByID(maGV);
         }
         private void FThongTinGiangVien_Load(object sender, EventArgs e)
         {
@@ -27,19 +30,19 @@ namespace QLDiemSV.UI.Teacher
         private void btnThongTinCaNhan_Click(object sender, EventArgs e)
         {
             pnlNoiDung.Controls.Clear();
-            UCThongTinGV ucTTGV = new UCThongTinGV(gvBLL.FindGiangVienByID("1500001"));
+            UCThongTinGV ucTTGV = new UCThongTinGV(giangVien);
             pnlNoiDung.Controls.Add(ucTTGV);
         }
         private void btnTKB_Click_1(object sender, EventArgs e)
         {
             pnlNoiDung.Controls.Clear();
-            UCThoiKhoaBieuGV ucTKBGV = new UCThoiKhoaBieuGV(gvBLL.FindGiangVienByID("1500001"));
+            UCThoiKhoaBieuGV ucTKBGV = new UCThoiKhoaBieuGV(giangVien);
             pnlNoiDung.Controls.Add(ucTKBGV);
         }
         private void btnXemDiem_Click(object sender, EventArgs e)
         {
             pnlNoiDung.Controls.Clear();
-            UCXemDiemGV ucXemDiem = new UCXemDiemGV(gvBLL.FindGiangVienByID("1500001"));
+            UCXemDiemGV ucXemDiem = new UCXemDiemGV(giangVien);
             pnlNoiDung.Controls.Add(ucXemDiem);
         }
     }

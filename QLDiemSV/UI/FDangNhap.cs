@@ -1,4 +1,6 @@
 ﻿using QLDiemSV.BLL;
+using QLDiemSV.UI.Student;
+using QLDiemSV.UI.Teacher;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,8 +51,8 @@ namespace QLDiemSV.UI
                 if (ma != null)
                 {
                     this.Hide();
-                    //FrmHV frmQTV_HV = new FrmHV(txtTenTaiKhoan.Text);
-                    //frmQTV_HV.ShowDialog();
+                    // frmQTV_HV = new FrmHV(txtTenTaiKhoan.Text);
+                   // frmQTV_HV.ShowDialog();
                     MessageBox.Show("SinhVien" + ma);
                     this.Show();
                     return;
@@ -62,8 +64,8 @@ namespace QLDiemSV.UI
                 if (ma != null)
                 {
                     this.Hide();
-                    //FrmHV frmQTV_HV = new FrmHV(txtTenTaiKhoan.Text);
-                    //frmQTV_HV.ShowDialog();
+                    FGiangVien frmQTV_HV = new FGiangVien(txtTenTaiKhoan.Text);
+                    frmQTV_HV.ShowDialog();
                     MessageBox.Show("GiangVien" + ma);
                     this.Show();
                     return;
