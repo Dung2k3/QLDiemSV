@@ -126,6 +126,7 @@
             this.btnThongTinCaNhan.Text = "Profile";
             this.btnThongTinCaNhan.TextOffset = new System.Drawing.Point(50, 0);
             this.btnThongTinCaNhan.UseTransparentBackground = true;
+            this.btnThongTinCaNhan.Click += new System.EventHandler(this.btnThongTinCaNhan_Click);
             // 
             // btnTKB
             // 
@@ -156,6 +157,7 @@
             this.btnTKB.Text = "Schedule";
             this.btnTKB.TextOffset = new System.Drawing.Point(50, 0);
             this.btnTKB.UseTransparentBackground = true;
+            this.btnTKB.Click += new System.EventHandler(this.btnTKB_Click_1);
             // 
             // guna2PictureBox1
             // 
@@ -197,6 +199,7 @@
             this.btnXemDiem.Text = "Academic Performance";
             this.btnXemDiem.TextOffset = new System.Drawing.Point(50, 0);
             this.btnXemDiem.UseTransparentBackground = true;
+            this.btnXemDiem.Click += new System.EventHandler(this.btnXemDiem_Click);
             // 
             // btnDangXuat
             // 
