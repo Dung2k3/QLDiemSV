@@ -15,37 +15,31 @@ namespace QLDiemSV.BLL
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                db.DIEMs.InsertOnSubmit(diem);
-                db.SubmitChanges();
+                db.pr_InsertDiem(diem.MaSV,diem.MaLop,diem.DiemQT,diem.DiemCK);
             }
             catch (SqlException e)
             {
                 MessageBox.Show(e.Message);
             }
         }
-        public void UpdateDiem(DIEM diem)
+        public void UpdateDiem(DIEM diemUpdate)
         {
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                DIEM diemUpdate = db.DIEMs.FirstOrDefault(e => e.MaSV.Equals(diem.MaSV) && e.MaLop.Equals(diem.MaLop));
-                diemUpdate.DiemCK = diem.DiemCK;
-                diemUpdate.DiemQT = diem.DiemQT;
-                db.SubmitChanges();
+                db.pr_UpdateDiem(diemUpdate.MaSV,diemUpdate.MaLop,diemUpdate.DiemQT,diemUpdate.DiemCK);
             }
             catch (SqlException e)
             {
                 MessageBox.Show(e.Message);
             }
         }
-        public void DeleteDiem(DIEM diem)
+        public void DeleteDiem(DIEM diemDelete)
         {
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                DIEM diemDelete = db.DIEMs.FirstOrDefault(e => e.MaSV.Equals(diem.MaSV) && e.MaLop.Equals(diem.MaLop));
-                db.DIEMs.DeleteOnSubmit(diemDelete);
-                db.SubmitChanges();
+                db.pr_DeleteDiem(diemDelete.MaSV, diemDelete.MaLop);
             }
             catch (SqlException e)
             {
