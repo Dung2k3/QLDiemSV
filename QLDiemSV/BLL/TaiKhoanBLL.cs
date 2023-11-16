@@ -39,8 +39,7 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
-                db.TAIKHOANs.InsertOnSubmit(taikhoan);
-                db.SubmitChanges();
+                db.pr_InsertTaiKhoan(taikhoan.TaiKhoan1,taikhoan.MatKhau,taikhoan.Loai);
             }
             catch (SqlException e) 
             {
@@ -54,8 +53,14 @@ namespace QLDiemSV.BLL
             try
             {
                 TAIKHOAN uptaikhoan = db.TAIKHOANs.FirstOrDefault(tk => tk.TaiKhoan1.Equals(taikhoan.TaiKhoan1));
-                uptaikhoan.MatKhau = taikhoan.MatKhau;
-                db.SubmitChanges();
+                if (uptaikhoan != null)
+                {
+                    db.pr_UpdateTaiKhoan(taikhoan.TaiKhoan1, taikhoan.MatKhau, taikhoan.Loai);
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản không tồn tại");
+                }
             }
             catch (SqlException e) 
             {
@@ -68,9 +73,15 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
-                TAIKHOAN deltaikhoan = db.TAIKHOANs.FirstOrDefault(tk => tk.TaiKhoan1.Equals(taikhoan));
-                db.TAIKHOANs.DeleteOnSubmit(deltaikhoan);
-                db.SubmitChanges();
+                TAIKHOAN uptaikhoan = db.TAIKHOANs.FirstOrDefault(tk => tk.TaiKhoan1.Equals(taikhoan));
+                if (uptaikhoan != null)
+                {
+                    db.pr_DeleteTaiKhoan(taikhoan);
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản không tồn tại");
+                }
             }
             catch (SqlException e) 
             {
