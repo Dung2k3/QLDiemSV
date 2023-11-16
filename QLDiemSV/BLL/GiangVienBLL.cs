@@ -95,29 +95,15 @@ namespace QLDiemSV.BLL
         }  
         public List<ft_TKBLopGVDangDayResult> GetTKBGV(string maGV, int hk, int namHoc)
         {
-            try
-            {
-                QLSinhVienDataContext db = new QLSinhVienDataContext();
-                return db.ft_TKBLopGVDangDay(maGV, hk, namHoc).ToList();
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.Message);
-                return null;
-            }
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.ft_TKBLopGVDangDay(maGV, hk, namHoc).ToList();
         }
         public List<ft_GVXemDiemResult> GVXemDiem(string maGV,string maLop)
         {
-            try
-            {
-                QLSinhVienDataContext db = new QLSinhVienDataContext();
-                return  db.ft_GVXemDiem(maGV,maLop).ToList();
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.Message);
-                return null;
-            }
+
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return  db.ft_GVXemDiem(maGV,maLop).ToList();
+
         }
         public List<vi_ThongTinGV> FindAllThongTinGV()
         {

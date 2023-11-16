@@ -42,9 +42,9 @@ namespace QLDiemSV.BLL
                 updateSV.TrangThai = sv.TrangThai;
                 db.SubmitChanges();
             }
-            catch (SqlException e) 
-            { 
-                MessageBox.Show(e.Message); 
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
         public void Delete(SINHVIEN sv)
@@ -57,9 +57,9 @@ namespace QLDiemSV.BLL
                 db.SINHVIENs.DeleteOnSubmit(deleteSV);
                 db.SubmitChanges();
             }
-            catch (SqlException e) 
-            { 
-                MessageBox.Show(e.Message); 
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
         public SINHVIEN FindByID(string id)
@@ -73,11 +73,11 @@ namespace QLDiemSV.BLL
             return db.SINHVIENs.ToList();
         }
 
-        public List<ft_TimSVTheoKhoaResult> FindSinhVienbyKhoa(string maKhoa)
-        {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
-            return db.ft_TimSVTheoKhoa(maKhoa).ToList();
-        }
+            public List<ft_TimSVTheoKhoaResult> FindSinhVienbyKhoa(string maKhoa)
+            {
+                QLSinhVienDataContext db = new QLSinhVienDataContext();
+                return db.ft_TimSVTheoKhoa(maKhoa).ToList();
+            }
 
         public List<vi_ThongTinSV> FindAllThongTinSV()
         {
@@ -97,16 +97,8 @@ namespace QLDiemSV.BLL
         }
         public List<ft_TKBSVTheoHKResult> LayTKB(string maSV, int hk, int nam)
         {
-            try
-            {
-                QLSinhVienDataContext db = new QLSinhVienDataContext();
-                return db.ft_TKBSVTheoHK(maSV, hk, nam).ToList();
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.Message);
-                return null;
-            }
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.ft_TKBSVTheoHK(maSV, hk, nam).ToList();
         }
     }
 }
