@@ -36,13 +36,12 @@ namespace QLDiemSV.BLL
             return db.vi_ThongTinLops.ToList();
         }
 
-        public void InsertLop(LOP lop)
+        public void InsertLop(LOP lop, BUOIHOC buoiHoc)
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
-                db.LOPs.InsertOnSubmit(lop);
-                db.SubmitChanges();
+                db.pr_ThemLop(lop.TenLop, lop.MaLoaiLop, lop.SL, lop.HK, lop.Namhoc, lop.MaGV, lop.MaMon, buoiHoc.MaCa, buoiHoc.MaPhong, buoiHoc.Thu);
             }
             catch (SqlException e)
             {
@@ -56,10 +55,7 @@ namespace QLDiemSV.BLL
             try
             {
                 LOP updateLop = db.LOPs.FirstOrDefault(e => e.MaLop.Equals(lop.MaLop));
-                updateLop.TenLop = lop.TenLop;
-                updateLop.SL = lop.SL;
-                updateLop.HK = lop.HK;
-                db.SubmitChanges();
+                db.PR_UpdateLOP(updateLop.MaLop, updateLop.TenLop, updateLop.MaLoaiLop, updateLop.SL, updateLop.HK, updateLop.Namhoc, updateLop.MaGV, updateLop.MaMon);
             }
             catch (SqlException e)
             {
@@ -73,8 +69,7 @@ namespace QLDiemSV.BLL
             try
             {
                 LOP deleteLop = db.LOPs.FirstOrDefault(e => e.MaLop.Equals(maLop));
-                db.LOPs.DeleteOnSubmit(deleteLop);
-                db.SubmitChanges();
+                db.PR_DeleteLOP(deleteLop.MaLop);
             }
             catch (SqlException e)
             {
