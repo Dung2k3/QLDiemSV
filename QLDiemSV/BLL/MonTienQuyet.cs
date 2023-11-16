@@ -15,8 +15,7 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
-                db.MONTIENQUYETs.InsertOnSubmit(monTienQuyet);
-                db.SubmitChanges();
+                db.PR_InsertMONTQ(monTienQuyet.MaMon, monTienQuyet.MaMonTQ);
             }
             catch (SqlException e) { 
                 MessageBox.Show(e.Message); 
@@ -29,8 +28,7 @@ namespace QLDiemSV.BLL
             try
             {
                 MONTIENQUYET deleteMonTienQuyet = db.MONTIENQUYETs.FirstOrDefault(e => e.Equals(monTienQuyet.MaMon) && e.Equals(monTienQuyet.MaMonTQ));
-                db.MONTIENQUYETs.DeleteOnSubmit(deleteMonTienQuyet);
-                db.SubmitChanges();
+                db.PR_DeleteMONTQ(deleteMonTienQuyet.MaMon, deleteMonTienQuyet.MaMonTQ);
             }
             catch (SqlException e) 
             { 

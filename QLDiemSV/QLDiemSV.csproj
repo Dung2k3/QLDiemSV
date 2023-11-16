@@ -70,6 +70,7 @@
     <Compile Include="BLL\DiemBLL.cs" />
     <Compile Include="BLL\GiangVienBLL.cs" />
     <Compile Include="BLL\KhoaBLL.cs" />
+    <Compile Include="BLL\TenKhoaBLL.cs" />
     <Compile Include="FormChild.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

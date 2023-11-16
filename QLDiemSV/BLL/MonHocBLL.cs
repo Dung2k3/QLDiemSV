@@ -26,8 +26,7 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
-                db.MONHOCs.InsertOnSubmit(monHoc);
-                db.SubmitChanges();
+                db.PR_InsertMONHOC(monHoc.MaMon, monHoc.TenMon, monHoc.SoTinChi, monHoc.MaKhoa, true);
             }
             catch (SqlException e)
             {
@@ -40,9 +39,7 @@ namespace QLDiemSV.BLL
             try
             {
                 MONHOC updateMonHoc = db.MONHOCs.FirstOrDefault(e=>e.MaMon.Equals(monHoc.MaMon));
-                updateMonHoc.TenMon = monHoc.TenMon;
-                updateMonHoc.SoTinChi = monHoc.SoTinChi;
-                db.SubmitChanges();
+                db.PR_UpdateMONHOC(updateMonHoc.MaMon, updateMonHoc.TenMon, updateMonHoc.SoTinChi, updateMonHoc.MaKhoa, true);
             }
             catch (SqlException e)
             {
@@ -56,8 +53,7 @@ namespace QLDiemSV.BLL
             try
             {
                 MONHOC deleteMonHoc = db.MONHOCs.FirstOrDefault(e => e.Equals(maMonHoc));
-                db.MONHOCs.DeleteOnSubmit(deleteMonHoc);
-                db.SubmitChanges();
+                db.PR_DeleteMONHOC(deleteMonHoc.MaMon);
             }
             catch (SqlException e)
             {

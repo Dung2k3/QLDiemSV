@@ -24,10 +24,21 @@ namespace QLDiemSV.UI.Admin
         {
             this.gvGiangVien.DataSource = giangvien.FindAllThongTinGV();
             gvGiangVien.ScrollBars = ScrollBars.Both;
+            
+            List <TenKhoaBLL> listKhoa = new List<TenKhoaBLL>();
+            TenKhoaBLL tckh = new TenKhoaBLL();
+            tckh.Ma = "0";
+            tckh.Ten = "Tất cả";
+            listKhoa.Add(tckh);
 
-            cmbKhoa.DataSource = khoaBLL.FindAllKhoa();
-            cmbKhoa.DisplayMember = "TenKhoa";
-            cmbKhoa.ValueMember = "MaKhoa";
+            foreach (KHOA khoa in khoaBLL.FindAllKhoa())
+            {
+                TenKhoaBLL kh = new TenKhoaBLL { Ma = khoa.MaKhoa, Ten = khoa.TenKhoa };
+                listKhoa.Add(kh);
+            }
+            cmbKhoa.DataSource = listKhoa;
+            cmbKhoa.DisplayMember = "Ten";
+            cmbKhoa.ValueMember = "Ma";
         }
         private void pbXoa_Click(object sender, EventArgs e)
         {
@@ -52,7 +63,10 @@ namespace QLDiemSV.UI.Admin
 
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            gvGiangVien.DataSource = giangvien.FindThongTinGiangVienByMaKhoa(cmbKhoa.Text);
+            if (cmbKhoa.Text.ToString() == "Tất cả")
+                gvGiangVien.DataSource = giangvien.FindAllThongTinGV();
+            else
+                gvGiangVien.DataSource = giangvien.FindThongTinGiangVienByMaKhoa(cmbKhoa.Text);
             gvGiangVien.ScrollBars = ScrollBars.Both;
         }
 
