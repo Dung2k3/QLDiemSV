@@ -44,6 +44,7 @@ namespace QLDiemSV.UI.Admin
         {
             DIEM diem = diemBLL.FindDiemByID(txtMaSV.Text, txtMaLop.Text);
             diemBLL.DeleteDiem(diem);
+            UCQuanTriDiem_Load(sender, e);
         }
 
         private void LamSach()

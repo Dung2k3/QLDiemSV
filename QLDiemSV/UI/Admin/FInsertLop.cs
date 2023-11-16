@@ -66,7 +66,6 @@ namespace QLDiemSV.UI.Admin
             buoihoc.MaCa = cmbCaHoc.Text;
             buoihoc.MaPhong = cmbPhongHoc.SelectedValue.ToString();
             buoihoc.Thu = int.Parse(cmbThu.Text);
-
             lopBLL.InsertLop(lop, buoihoc);
             Close();
         }

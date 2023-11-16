@@ -15,8 +15,7 @@ namespace QLDiemSV
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                db.KHOAs.InsertOnSubmit(khoa);
-                db.SubmitChanges();
+                db.pr_InsertKhoa(khoa.MaKhoa, khoa.TenKhoa, khoa.MaTrKhoa, khoa.TrangThai);
             }
             catch (SqlException e)
             {
@@ -28,11 +27,7 @@ namespace QLDiemSV
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                KHOA khoaUpdate = db.KHOAs.FirstOrDefault(e => e.MaKhoa.Equals(khoa.MaKhoa));
-                khoaUpdate.MONHOCs = khoa.MONHOCs;
-                khoaUpdate.TenKhoa = khoa.TenKhoa;
-                khoaUpdate.MaTrKhoa = khoa.MaTrKhoa;
-                db.SubmitChanges();
+                db.pr_UpdateKhoa(khoa.MaKhoa, khoa.TenKhoa, khoa.MaTrKhoa, khoa.TrangThai);
             }
             catch (SqlException e)
             {
@@ -44,9 +39,7 @@ namespace QLDiemSV
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                KHOA khoaDelete = db.KHOAs.FirstOrDefault(e => e.MaKhoa.Equals(maKhoa));
-                db.KHOAs.DeleteOnSubmit(khoaDelete);
-                db.SubmitChanges();
+                db.pr_DeleteKhoa(maKhoa);
             }
             catch (SqlException e)
             {

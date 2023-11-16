@@ -15,8 +15,8 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
-                db.SINHVIENs.InsertOnSubmit(sv);
-                db.SubmitChanges();
+                db.pr_InsertSinhVien(sv.HoSV,sv.TenlotSV,sv.TenSV,sv.CCCD,sv.DiaChi,sv.Gioitinh, sv.NgaySinh, sv.SDT,sv.Email, sv.NamNhapHoc, sv.MaKhoa,null,true);
+               
             }
             catch (SqlException ex)
             {
@@ -28,19 +28,8 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
-                SINHVIEN updateSV = db.SINHVIENs.FirstOrDefault(e => e.MaSV.Equals(sv.MaSV));
-                updateSV.HoSV = sv.HoSV;
-                updateSV.TenlotSV = sv.TenlotSV;
-                updateSV.TenSV = sv.TenSV;
-                updateSV.DiaChi = sv.DiaChi;
-                updateSV.CCCD = sv.CCCD;
-                updateSV.Email = sv.Email;
-                updateSV.SDT = sv.SDT;
-                updateSV.Gioitinh = sv.Gioitinh;
-                updateSV.NgaySinh = sv.NgaySinh;
-                updateSV.NamNhapHoc = sv.NamNhapHoc;
-                updateSV.TrangThai = sv.TrangThai;
-                db.SubmitChanges();
+                db.pr_UpdateSinhVien(sv.MaSV,sv.HoSV,sv.TenlotSV,sv.TenSV,sv.CCCD,sv.DiaChi,sv.Gioitinh,sv.NgaySinh,sv.SDT,sv.Email,sv.NamNhapHoc,sv.MaKhoa,sv.TaiKhoan,sv.TrangThai);
+                
             }
             catch (SqlException e)
             {
@@ -52,10 +41,8 @@ namespace QLDiemSV.BLL
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
-
-                SINHVIEN deleteSV = db.SINHVIENs.FirstOrDefault(e => e.MaSV.Equals(sv.MaSV));
-                db.SINHVIENs.DeleteOnSubmit(deleteSV);
-                db.SubmitChanges();
+                db.pr_DeleteSinhVien(sv.MaSV);
+               
             }
             catch (SqlException e)
             {
