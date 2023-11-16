@@ -17,8 +17,8 @@ namespace QLDiemSV.BLL
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                db.GIANGVIENs.InsertOnSubmit(gv);
-                db.SubmitChanges();
+                db.pr_InsertGiangVien(gv.HoGV, gv.TenlotGV, gv.TenGV, gv.CCCD, gv.DiaChi, gv.Gioitinh,gv.NgaySinh, gv.SDT, gv.Email, gv.MaLoaiGV, gv.MaKhoa, gv.TaiKhoan, gv.TrangThai);
+                
             }
             catch (SqlException e)
             {
@@ -30,18 +30,8 @@ namespace QLDiemSV.BLL
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                GIANGVIEN giangVienUpdate = db.GIANGVIENs.FirstOrDefault(e => e.MaGV.Equals(gv.MaGV));
-                giangVienUpdate.HoGV = gv.HoGV;
-                giangVienUpdate.TenlotGV = gv.TenlotGV;
-                giangVienUpdate.TenGV = gv.TenGV;
-                giangVienUpdate.DiaChi = gv.DiaChi;
-                giangVienUpdate.CCCD = gv.CCCD;
-                giangVienUpdate.Email = gv.Email;
-                giangVienUpdate.SDT = gv.SDT;
-                giangVienUpdate.Gioitinh = gv.Gioitinh;
-                giangVienUpdate.MaKhoa = gv.MaKhoa;
-                giangVienUpdate.MaLoaiGV = gv.MaLoaiGV;
-                db.SubmitChanges();
+                db.pr_UpdateGiangVien(gv.MaGV,gv.HoGV, gv.TenlotGV, gv.TenGV, gv.CCCD, gv.DiaChi, gv.Gioitinh, gv.NgaySinh, gv.SDT, gv.Email, gv.MaLoaiGV, gv.MaKhoa, gv.TaiKhoan, gv.TrangThai);
+                
             }
             catch (SqlException e)
             {
@@ -53,9 +43,8 @@ namespace QLDiemSV.BLL
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                GIANGVIEN giangVien = db.GIANGVIENs.FirstOrDefault(e => e.MaGV.Equals(gv.MaGV));
-                db.GIANGVIENs.DeleteOnSubmit(giangVien);
-                db.SubmitChanges();
+                db.pr_DeleteGiangVien(gv.MaGV);
+                
             }
             catch (SqlException e)
             {

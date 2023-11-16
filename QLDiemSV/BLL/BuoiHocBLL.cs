@@ -15,23 +15,31 @@ namespace QLDiemSV.BLL
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                db.BUOIHOCs.InsertOnSubmit(bh);
-                db.SubmitChanges();
+                db.pr_InsertBuoiHoc(bh.MaLop, bh.MaCa, bh.MaPhong, bh.Thu);
             }
             catch (SqlException e)
             {
                 MessageBox.Show(e.Message);
             }
         }
-      
-        public void DeleteBuoiHoc(BUOIHOC bh)
+        public void UpdateBuoiHoc(BUOIHOC bhUpdate)
         {
             try
             {
                 QLSinhVienDataContext db = new QLSinhVienDataContext();
-                BUOIHOC bhDelete = db.BUOIHOCs.FirstOrDefault(e => e.MaLop.Equals(bh.MaLop) && e.MaPhong.Equals(bh.MaPhong) && e.MaCa.Equals(bh.MaCa) && e.Thu.Equals(bh.Thu));
-                db.BUOIHOCs.DeleteOnSubmit(bhDelete);
-                db.SubmitChanges();
+                db.pr_UpdateBuoiHoc(bhUpdate.MaLop, bhUpdate.MaCa, bhUpdate.MaPhong, bhUpdate.Thu);
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        public void DeleteBuoiHoc(BUOIHOC bhDelete)
+        {
+            try
+            {
+                QLSinhVienDataContext db = new QLSinhVienDataContext();
+                db.pr_DeleteBuoiHoc(bhDelete.MaLop, bhDelete.MaCa, bhDelete.MaPhong, bhDelete.Thu);
             }
             catch (SqlException e)
             {
@@ -48,20 +56,6 @@ namespace QLDiemSV.BLL
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.vi_LopCaPhongs.ToList();
-        }
-
-        public void ThemBuoiHoc(LOP lop, BUOIHOC buoiHoc)
-        {
-            try
-            {
-                QLSinhVienDataContext db = new QLSinhVienDataContext();
-                db.PR_ThemBuoiHoc(lop.TenLop, lop.MaLoaiLop, lop.SL, lop.HK, lop.Namhoc, lop.MaGV, lop.MaMon, buoiHoc.MaCa, buoiHoc.MaPhong, buoiHoc.Thu);
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-
         }
     }
 }
