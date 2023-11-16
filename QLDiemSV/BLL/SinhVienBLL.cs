@@ -16,7 +16,7 @@ namespace QLDiemSV.BLL
             try
             {
                 db.pr_InsertSinhVien(sv.HoSV,sv.TenlotSV,sv.TenSV,sv.CCCD,sv.DiaChi,sv.Gioitinh, sv.NgaySinh, sv.SDT,sv.Email, sv.NamNhapHoc, sv.MaKhoa,null,true);
-                db.SubmitChanges();
+               
             }
             catch (SqlException ex)
             {
@@ -29,7 +29,7 @@ namespace QLDiemSV.BLL
             try
             {
                 db.pr_UpdateSinhVien(sv.MaSV,sv.HoSV,sv.TenlotSV,sv.TenSV,sv.CCCD,sv.DiaChi,sv.Gioitinh,sv.NgaySinh,sv.SDT,sv.Email,sv.NamNhapHoc,sv.MaKhoa,sv.TaiKhoan,sv.TrangThai);
-                db.SubmitChanges();
+                
             }
             catch (SqlException e)
             {
@@ -42,7 +42,7 @@ namespace QLDiemSV.BLL
             try
             {
                 db.pr_DeleteSinhVien(sv.MaSV);
-                db.SubmitChanges();
+               
             }
             catch (SqlException e)
             {
