@@ -15,6 +15,7 @@ namespace QLDiemSV.UI.Admin
     public partial class UCQuanTriDiem : UserControl
     {
         DiemBLL diemBLL = new DiemBLL();
+        LopBLL lopBLL = new LopBLL();
         public UCQuanTriDiem()
         {
             InitializeComponent();
@@ -22,10 +23,18 @@ namespace QLDiemSV.UI.Admin
 
         private void UCQuanTriDiem_Load(object sender, EventArgs e)
         {
-            this.gvDiemLop.DataSource = diemBLL.FindDiemSVTheoLop();
             this.gvDiemMon.DataSource = diemBLL.FindDiemSVTheoMon();
-            gvDiemLop.ScrollBars = ScrollBars.Both;
             gvDiemMon.ScrollBars = ScrollBars.Both;
+
+            List<LOP> list = new List<LOP>();
+            LOP all = new LOP();
+            all.TenLop = "Tất cả";
+            all.MaLop = "";
+            list.Add(all);
+            list.AddRange(lopBLL.FindAllLop());
+            cmbLop.DataSource = list;
+            cmbLop.DisplayMember = "TenLop";
+            cmbLop.ValueMember = "MaLop";
         }
 
         private void pbSua_Click(object sender, EventArgs e)
@@ -85,6 +94,19 @@ namespace QLDiemSV.UI.Admin
             txtTenSV.Text = gvDiemMon.CurrentRow.Cells[1].Value.ToString();
             txtMaLop.Text = gvDiemMon.CurrentRow.Cells[2].Value.ToString();
             txtLop.Text = gvDiemMon.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void cmbLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbLop.Text == "Tất cả")
+            {
+                gvDiemLop.DataSource = diemBLL.FindDiemSVTheoLop();
+            }
+            else
+            {
+                gvDiemLop.DataSource = diemBLL.FindDiemSVTheoMaLop(cmbLop.SelectedValue.ToString());
+            }
+            gvDiemLop.ScrollBars = ScrollBars.Both;
         }
     }
 }

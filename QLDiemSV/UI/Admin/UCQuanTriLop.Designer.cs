@@ -73,11 +73,13 @@
             this.HocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ptbThemSV = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbXoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbThemSV)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSSV
@@ -597,11 +599,27 @@
             this.TenGV.ReadOnly = true;
             this.TenGV.Width = 200;
             // 
+            // ptbThemSV
+            // 
+            this.ptbThemSV.BackColor = System.Drawing.Color.Transparent;
+            this.ptbThemSV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbThemSV.Image = global::QLDiemSV.Properties.Resources.profile__3_;
+            this.ptbThemSV.ImageRotate = 0F;
+            this.ptbThemSV.Location = new System.Drawing.Point(960, 292);
+            this.ptbThemSV.Name = "ptbThemSV";
+            this.ptbThemSV.Size = new System.Drawing.Size(39, 50);
+            this.ptbThemSV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbThemSV.TabIndex = 360;
+            this.ptbThemSV.TabStop = false;
+            this.ptbThemSV.UseTransparentBackground = true;
+            this.ptbThemSV.Click += new System.EventHandler(this.ptbThemSV_Click);
+            // 
             // UCQuanTriLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ptbThemSV);
             this.Controls.Add(this.gvLop);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.pbThem);
@@ -618,6 +636,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbThem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbXoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbThemSV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -664,5 +683,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HocKy;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenGV;
+        private Guna.UI2.WinForms.Guna2PictureBox ptbThemSV;
     }
 }

@@ -60,11 +60,11 @@ namespace QLDiemSV.BLL
             return db.SINHVIENs.ToList();
         }
 
-            public List<ft_TimSVTheoKhoaResult> FindSinhVienbyKhoa(string maKhoa)
-            {
-                QLSinhVienDataContext db = new QLSinhVienDataContext();
-                return db.ft_TimSVTheoKhoa(maKhoa).ToList();
-            }
+        public List<ft_TimSVTheoKhoaResult> FindSinhVienbyKhoa(string maKhoa)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.ft_TimSVTheoKhoa(maKhoa).ToList();
+        }
 
         public List<vi_ThongTinSV> FindAllThongTinSV()
         {
@@ -86,6 +86,12 @@ namespace QLDiemSV.BLL
         {
             QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.ft_TKBSVTheoHK(maSV, hk, nam).ToList();
+        }
+
+        public List<ft_ThongTinSVChuaHocResult> LayDSSVChuaHoc(string maLop)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.ft_ThongTinSVChuaHoc(maLop).ToList();
         }
     }
 }
