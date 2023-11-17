@@ -75,6 +75,12 @@ namespace QLDiemSV.BLL
             decimal? diem = db.ft_TinhTBTL(maSV);
             return (double)(diem.HasValue ? diem.Value : 0);
         }
+
+        public List<ft_FindDiemSVTheoLopResult> FindDiemSVTheoMaLop (string maLop)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.ft_FindDiemSVTheoLop(maLop).ToList();
+        }
     }
 
 }

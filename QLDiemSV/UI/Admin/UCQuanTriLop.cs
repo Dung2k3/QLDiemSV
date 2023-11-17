@@ -49,5 +49,16 @@ namespace QLDiemSV.UI.Admin
             txtNamHoc.Text = gvLop.CurrentRow.Cells[7].Value.ToString();
             txtGiangVien.Text = gvLop.CurrentRow.Cells[8].Value.ToString();
         }
+
+        private void ptbThemSV_Click(object sender, EventArgs e)
+        {
+            if (txtMaLop.Text != "")
+            {
+                FInsertDiem form = new FInsertDiem(txtMaLop.Text);
+                form.ShowDialog();
+                UCQuanTriLop_Load(sender, e);
+            }
+            else MessageBox.Show("Vui lòng chọn lớp");
+        }
     }
 }

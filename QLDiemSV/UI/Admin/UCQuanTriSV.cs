@@ -25,15 +25,15 @@ namespace QLDiemSV.UI.Admin
             this.gvSinhVien.DataSource = sinhVienBLL.FindAllThongTinSV();
             gvSinhVien.ScrollBars = ScrollBars.Both;
 
-            List<TenKhoaBLL> listKhoa = new List<TenKhoaBLL>();
-            TenKhoaBLL tckh = new TenKhoaBLL();
+            List<TenKhoaModel> listKhoa = new List<TenKhoaModel>();
+            TenKhoaModel tckh = new TenKhoaModel();
             tckh.Ma = "0";
             tckh.Ten = "Tất cả";
             listKhoa.Add(tckh);
 
             foreach (KHOA khoa in khoaBLL.FindAllKhoa())
             {
-                TenKhoaBLL kh = new TenKhoaBLL { Ma = khoa.MaKhoa, Ten = khoa.TenKhoa };
+                TenKhoaModel kh = new TenKhoaModel { Ma = khoa.MaKhoa, Ten = khoa.TenKhoa };
                 listKhoa.Add(kh);
             }
             cmbKhoa.DataSource = listKhoa;
@@ -50,9 +50,13 @@ namespace QLDiemSV.UI.Admin
 
         private void pbSua_Click(object sender, EventArgs e)
         {
-            FUpdateSV form = new FUpdateSV(txtMaSV.Text);
-            form.ShowDialog();
-            UCQuanTriSV_Load(sender, e);
+            if (txtMaSV.Text != "")
+            {
+                FUpdateSV form = new FUpdateSV(txtMaSV.Text);
+                form.ShowDialog();
+                UCQuanTriSV_Load(sender, e);
+            }
+            else MessageBox.Show("Vui lòng chọn giảng viên");
         }
 
         private void pbXoa_Click(object sender, EventArgs e)

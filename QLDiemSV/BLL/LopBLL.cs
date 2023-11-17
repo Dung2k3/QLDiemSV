@@ -82,5 +82,11 @@ namespace QLDiemSV.BLL
         {            
             return db.ft_ThongTinLopTheoHS(maSV,hk,nh).ToList();
         }
+
+        public List<FT_TimTTLopTheoIDResult> FindThongTinLopByID(string maLop)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.FT_TimTTLopTheoID(maLop).ToList();
+        }
     }
 }

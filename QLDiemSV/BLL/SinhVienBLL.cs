@@ -87,5 +87,11 @@ namespace QLDiemSV.BLL
         {
             return db.ft_TKBSVTheoHK(maSV, hk, nam).ToList();
         }
+
+        public List<ft_ThongTinSVChuaHocResult> LayDSSVChuaHoc(string maLop)
+        {
+            QLSinhVienDataContext db = new QLSinhVienDataContext();
+            return db.ft_ThongTinSVChuaHoc(maLop).ToList();
+        }
     }
 }

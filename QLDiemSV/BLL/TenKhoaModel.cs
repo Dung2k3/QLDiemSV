@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLDiemSV.BLL
 {
-    public class TenKhoaBLL
+    public class TenKhoaModel
     {
         public string Ma { get; set; }
         public string Ten { get; set; }

@@ -34,7 +34,6 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.btnHocVien = new Guna.UI2.WinForms.Guna2Button();
             this.btnGiaoVien = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -42,6 +41,7 @@
             this.btnTaiKhoan = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.btnLop = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -200,7 +200,7 @@
             this.btnKhoaHoc.Name = "btnKhoaHoc";
             this.btnKhoaHoc.Size = new System.Drawing.Size(351, 62);
             this.btnKhoaHoc.TabIndex = 110;
-            this.btnKhoaHoc.Text = "Courses";
+            this.btnKhoaHoc.Text = "Score";
             this.btnKhoaHoc.TextOffset = new System.Drawing.Point(50, 0);
             this.btnKhoaHoc.UseTransparentBackground = true;
             this.btnKhoaHoc.Click += new System.EventHandler(this.btnKhoaHoc_Click);
