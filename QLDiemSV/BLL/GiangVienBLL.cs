@@ -16,8 +16,8 @@ namespace QLDiemSV.BLL
         public GiangVienBLL()
         {
             string conn = "Data Source = (localdb)\\mssqllocaldb; Initial Catalog = QLDiemSV;" +
-                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.taikhoan + ";";
-            db = new QLSinhVienDataContext(conn); ;
+                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.matkhau + ";";
+            db = new QLSinhVienDataContext(conn);
         }
         public void InsertGiangVien(GIANGVIEN gv)
         {

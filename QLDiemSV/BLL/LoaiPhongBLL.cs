@@ -13,7 +13,7 @@ namespace QLDiemSV.BLL
         public LoaiPhongBLL()
         {
             string conn = "Data Source = (localdb)\\mssqllocaldb; Initial Catalog = QLDiemSV;" +
-                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.taikhoan + ";";
+                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.matkhau + ";";
             db = new QLSinhVienDataContext(conn);
         }
         public List<LOAIPHONG> FindAll()

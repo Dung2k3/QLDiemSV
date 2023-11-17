@@ -15,7 +15,7 @@ namespace QLDiemSV.BLL
         public BuoiHocBLL()
         {
             string conn = "Data Source = (localdb)\\mssqllocaldb; Initial Catalog = QLDiemSV;" +
-                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.taikhoan + ";";
+                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.matkhau + ";";
             db = new QLSinhVienDataContext(conn);
         }
         public void InsertBuoiHoc(BUOIHOC bh)

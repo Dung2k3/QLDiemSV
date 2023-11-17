@@ -15,7 +15,7 @@ namespace QLDiemSV
         public KhoaBLL()
         {
             string conn = "Data Source = (localdb)\\mssqllocaldb; Initial Catalog = QLDiemSV;" +
-                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.taikhoan + ";";
+                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.matkhau + ";";
             db = new QLSinhVienDataContext(conn);
         }
         public void InsertKhoa(KHOA khoa)
