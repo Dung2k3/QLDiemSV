@@ -16,7 +16,9 @@ namespace QLDiemSV.UI
 {
     public partial class FDangNhap : Form
     {
-        TaiKhoanBLL tkBLL = new TaiKhoanBLL(); 
+        public static string taikhoan;
+        public static string matkhau;
+        QLSinhVienDataContext db = new QLSinhVienDataContext();
         public FDangNhap()
         {
             InitializeComponent();
@@ -35,10 +37,12 @@ namespace QLDiemSV.UI
             string mk = txtMatKhau.Text;
             if (radQTV.Checked)
             {
-                string ma = tkBLL.CheckDangNhap(tk, mk, 0);
+                string ma = db.ft_ChkDangNhap(tk, mk, 0);
                 if ("admin".Equals(ma))
                 {
                     this.Hide();
+                    taikhoan = txtTenTaiKhoan.Text;
+                    matkhau = txtMatKhau.Text;
                     FAdmin fadmin = new FAdmin();
                     fadmin.ShowDialog();
                     this.Show();
@@ -47,10 +51,12 @@ namespace QLDiemSV.UI
             }
             if (radHV.Checked)
             {
-                string ma = tkBLL.CheckDangNhap(tk, mk, 1);
+                string ma = db.ft_ChkDangNhap(tk, mk, 1);
                 if (ma != null)
                 {
                     this.Hide();
+                    taikhoan = txtTenTaiKhoan.Text;
+                    matkhau = txtMatKhau.Text;
                     FSinhVien fSV = new FSinhVien(txtTenTaiKhoan.Text);
                     fSV.ShowDialog();
                     this.Show();
@@ -59,10 +65,12 @@ namespace QLDiemSV.UI
             }
             if (radGV.Checked)
             {
-                string ma = tkBLL.CheckDangNhap(tk, mk, 2);
+                string ma = db.ft_ChkDangNhap(tk, mk, 2);
                 if (ma != null)
                 {
                     this.Hide();
+                    taikhoan = txtTenTaiKhoan.Text;
+                    matkhau = txtMatKhau.Text;
                     FGiangVien fGV = new FGiangVien(txtTenTaiKhoan.Text);
                     fGV.ShowDialog();
                     this.Show();

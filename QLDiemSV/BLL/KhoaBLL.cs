@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLDiemSV.UI;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,11 +11,17 @@ namespace QLDiemSV
 {
     internal class KhoaBLL
     {
+        QLSinhVienDataContext db;
+        public KhoaBLL()
+        {
+            string conn = "Data Source = (localdb)\\mssqllocaldb; Initial Catalog = QLDiemSV;" +
+                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.taikhoan + ";";
+            db = new QLSinhVienDataContext(conn);
+        }
         public void InsertKhoa(KHOA khoa)
         {
             try
             {
-                QLSinhVienDataContext db = new QLSinhVienDataContext();
                 db.pr_InsertKhoa(khoa.MaKhoa, khoa.TenKhoa, khoa.MaTrKhoa, khoa.TrangThai);
             }
             catch (SqlException e)
@@ -26,7 +33,6 @@ namespace QLDiemSV
         {
             try
             {
-                QLSinhVienDataContext db = new QLSinhVienDataContext();
                 db.pr_UpdateKhoa(khoa.MaKhoa, khoa.TenKhoa, khoa.MaTrKhoa, khoa.TrangThai);
             }
             catch (SqlException e)
@@ -38,7 +44,6 @@ namespace QLDiemSV
         {
             try
             {
-                QLSinhVienDataContext db = new QLSinhVienDataContext();
                 db.pr_DeleteKhoa(maKhoa);
             }
             catch (SqlException e)
@@ -48,12 +53,10 @@ namespace QLDiemSV
         }
         public List<KHOA> FindAllKhoa()
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.KHOAs.ToList();
         }
         public KHOA FindOneByID(string maKhoa)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.KHOAs.FirstOrDefault(e => e.MaKhoa.Equals(maKhoa));
         }
 

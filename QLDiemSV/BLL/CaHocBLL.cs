@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLDiemSV.UI;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,14 +11,19 @@ namespace QLDiemSV.BLL
 {
     internal class CaHocBLL
     {
+        QLSinhVienDataContext db;
+        public CaHocBLL()
+        {
+            string conn = "Data Source = (localdb)\\mssqllocaldb; Initial Catalog = QLDiemSV;" +
+                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.taikhoan + ";";
+            db = new QLSinhVienDataContext(conn);
+        }
         public List<CAHOC> FindAllCaHoc()
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.CAHOCs.ToList();
         }
         public CAHOC FindByID(string maCaHoc)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.CAHOCs.FirstOrDefault(e => e.Equals(maCaHoc));
         }  
     }

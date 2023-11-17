@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLDiemSV.UI;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,33 +11,35 @@ namespace QLDiemSV.BLL
 {
     internal class TaiKhoanBLL
     {
+        QLSinhVienDataContext db;
+        public TaiKhoanBLL()
+        {
+            string conn = "Data Source = (localdb)\\mssqllocaldb; Initial Catalog = QLDiemSV;" +
+                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.taikhoan + ";";
+            db = new QLSinhVienDataContext(conn);
+        }
         public List<TAIKHOAN> FindAll()
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.TAIKHOANs.ToList();
         }
 
         public TAIKHOAN FindByID(string taikhoan)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.TAIKHOANs.FirstOrDefault(tk => tk.TaiKhoan1.Equals(taikhoan));
         }
 
         public List<vi_taikhoangiangvien> FindTKGV()
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.vi_taikhoangiangviens.ToList();
         }
 
         public List<vi_taikhoansinhvien> FindTKSV()
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.vi_taikhoansinhviens.ToList();
         }
 
         public void Insert(TAIKHOAN taikhoan)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
                 db.TAIKHOANs.InsertOnSubmit(taikhoan);
@@ -50,7 +53,6 @@ namespace QLDiemSV.BLL
 
         public void Update(TAIKHOAN taikhoan)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
                 TAIKHOAN uptaikhoan = db.TAIKHOANs.FirstOrDefault(tk => tk.TaiKhoan1.Equals(taikhoan.TaiKhoan1));
@@ -65,7 +67,6 @@ namespace QLDiemSV.BLL
 
         public void Delete(string taikhoan)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
                 TAIKHOAN deltaikhoan = db.TAIKHOANs.FirstOrDefault(tk => tk.TaiKhoan1.Equals(taikhoan));
@@ -79,13 +80,13 @@ namespace QLDiemSV.BLL
         }
         public string CheckDangNhap(string tk, string mk,int loai)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
-            return db.ft_ChkDangNhap(tk, mk, loai);
+            QLSinhVienDataContext dbroot = new QLSinhVienDataContext();
+            return dbroot.ft_ChkDangNhap(tk, mk, loai);
         }
         public bool CheckQuenMK(string tk, string email, string cccd, int loai)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
-            return (bool)db.ft_ChkQuenMatKhau(tk, email, cccd, loai);   
+            QLSinhVienDataContext dbroot = new QLSinhVienDataContext();
+            return (bool)dbroot.ft_ChkQuenMatKhau(tk, email, cccd, loai);   
         }
     }
 }
