@@ -70,7 +70,7 @@
     <Compile Include="BLL\DiemBLL.cs" />
     <Compile Include="BLL\GiangVienBLL.cs" />
     <Compile Include="BLL\KhoaBLL.cs" />
-    <Compile Include="BLL\TenKhoaBLL.cs" />
+    <Compile Include="BLL\TenKhoaModel.cs" />
     <Compile Include="FormChild.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +92,12 @@
     </Compile>
     <Compile Include="UI\Admin\FAdmin.Designer.cs">
       <DependentUpon>FAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\FInsertDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\FInsertDiem.Designer.cs">
+      <DependentUpon>FInsertDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Admin\FInsertGV.cs">
       <SubType>Form</SubType>
@@ -158,6 +164,12 @@
     </Compile>
     <Compile Include="UI\Admin\UCQuanTriTK.Designer.cs">
       <DependentUpon>UCQuanTriTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\UCSVChuaHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\UCSVChuaHoc.Designer.cs">
+      <DependentUpon>UCSVChuaHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FMessageBox.cs">
       <SubType>Form</SubType>
@@ -275,6 +287,9 @@
     <EmbeddedResource Include="UI\Admin\FAdmin.resx">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\FInsertDiem.resx">
+      <DependentUpon>FInsertDiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Admin\FInsertGV.resx">
       <DependentUpon>FInsertGV.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Admin\UCQuanTriTK.resx">
       <DependentUpon>UCQuanTriTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Admin\UCSVChuaHoc.resx">
+      <DependentUpon>UCSVChuaHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FMessageBox.resx">
       <DependentUpon>FMessageBox.cs</DependentUpon>
