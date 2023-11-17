@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLDiemSV.UI;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,9 +11,15 @@ namespace QLDiemSV.BLL
 {
     internal class MonTienQuyet
     {
+        QLSinhVienDataContext db;
+        public MonTienQuyet()
+        {
+            string conn = "Data Source = (localdb)\\mssqllocaldb; Initial Catalog = QLDiemSV;" +
+                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.taikhoan + ";";
+            db = new QLSinhVienDataContext(conn);
+        }
         public void InsertMonTienQuyet(MONTIENQUYET monTienQuyet)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
                 db.PR_InsertMONTQ(monTienQuyet.MaMon, monTienQuyet.MaMonTQ);
@@ -24,7 +31,6 @@ namespace QLDiemSV.BLL
 
         public void DeleteMonTienQyet(MONTIENQUYET monTienQuyet)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             try
             {
                 MONTIENQUYET deleteMonTienQuyet = db.MONTIENQUYETs.FirstOrDefault(e => e.Equals(monTienQuyet.MaMon) && e.Equals(monTienQuyet.MaMonTQ));

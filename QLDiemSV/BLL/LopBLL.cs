@@ -1,4 +1,5 @@
-﻿using QLDiemSV.UI.Teacher;
+﻿using QLDiemSV.UI;
+using QLDiemSV.UI.Teacher;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -11,11 +12,17 @@ namespace QLDiemSV.BLL
 {
     internal class LopBLL
     {
+        QLSinhVienDataContext db;
+        public LopBLL()
+        {
+            string conn = "Data Source = (localdb)\\mssqllocaldb; Initial Catalog = QLDiemSV;" +
+                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.taikhoan + ";";
+            db = new QLSinhVienDataContext(conn);
+        }
         public List<LOP> FindAllLop()
         {
             try
-            {
-                QLSinhVienDataContext db = new QLSinhVienDataContext();
+            {                
                 return db.LOPs.ToList();
             } catch (SqlException e)
             {
@@ -25,23 +32,20 @@ namespace QLDiemSV.BLL
         }
 
         public LOP FindByID(string maLop)
-        {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
+        {            
             return db.LOPs.FirstOrDefault(e=>e.Equals(maLop));
         }
 
         public List<vi_ThongTinLop> FindAllThongTinLop()
-        {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
+        {            
             return db.vi_ThongTinLops.ToList();
         }
 
         public void InsertLop(LOP lop, BUOIHOC buoiHoc)
-        {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
+        {            
             try
             {
-                db.pr_ThemLop(lop.TenLop, lop.MaLoaiLop, lop.SL, lop.HK, lop.Namhoc, lop.MaGV, lop.MaMon, buoiHoc.MaCa, buoiHoc.MaPhong, buoiHoc.Thu);
+                db.pr_InsertLop(lop.TenLop, lop.MaLoaiLop, lop.SL, lop.HK, lop.Namhoc, lop.MaGV, lop.MaMon, buoiHoc.MaCa, buoiHoc.MaPhong, buoiHoc.Thu);
             }
             catch (SqlException e)
             {
@@ -50,8 +54,7 @@ namespace QLDiemSV.BLL
         }
 
         public void UpdateLop(LOP lop)
-        {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
+        {            
             try
             {
                 LOP updateLop = db.LOPs.FirstOrDefault(e => e.MaLop.Equals(lop.MaLop));
@@ -64,8 +67,7 @@ namespace QLDiemSV.BLL
         }
 
         public void DeleteLop(string maLop)
-        {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
+        {            
             try
             {
                 LOP deleteLop = db.LOPs.FirstOrDefault(e => e.MaLop.Equals(maLop));
@@ -77,8 +79,7 @@ namespace QLDiemSV.BLL
             }
         }
         public List<ft_ThongTinLopTheoHSResult> FindByID_HK_NHvi(string maSV, int hk, int nh)
-        {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
+        {            
             return db.ft_ThongTinLopTheoHS(maSV,hk,nh).ToList();
         }
 

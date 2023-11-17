@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLDiemSV.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,20 @@ namespace QLDiemSV.BLL
 {
     internal class LoaiGVBLL
     {
+        QLSinhVienDataContext db;
+        public LoaiGVBLL()
+        {
+            string conn = "Data Source = (localdb)\\mssqllocaldb; Initial Catalog = QLDiemSV;" +
+                "User Id=" + FDangNhap.taikhoan + ";Password= " + FDangNhap.taikhoan + ";";
+            db = new QLSinhVienDataContext(conn);
+        }
         public List<LOAIGV> FindAll()
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.LOAIGVs.ToList();
         }
 
         public LOAIGV FindByID(string maLoaiGV)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.LOAIGVs.FirstOrDefault(lgv => lgv.MaLoaiGV.Equals(maLoaiGV));
         }
     }
