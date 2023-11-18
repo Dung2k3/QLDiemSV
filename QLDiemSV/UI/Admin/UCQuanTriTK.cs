@@ -45,15 +45,26 @@ namespace QLDiemSV.UI.Admin
 
         private void pbSua_Click(object sender, EventArgs e)
         {
-            FUpdateTK form = new FUpdateTK(txtTaiKhoan.Text);
+            if (txtTaiKhoan.Text != "")
+            {
+                FUpdateTK form = new FUpdateTK(txtTaiKhoan.Text);
             form.ShowDialog();
             UCQuanTriTaiKhoan_Load(sender, e);
+            }
+            else MessageBox.Show("Vui lòng chọn tài khoản");
         }
 
         private void pbXoa_Click(object sender, EventArgs e)
         {
-            tkBLL.Delete(txtTaiKhoan.Text);
+            if (txtTaiKhoan.Text != "")
+            {
+                tkBLL.Delete(txtTaiKhoan.Text);
+                UCQuanTriTaiKhoan_Load(sender, e);
+            }
+            else MessageBox.Show("Vui lòng chọn tài khoản");
             UCQuanTriTaiKhoan_Load(sender, e);
+
+
         }
     }
 }

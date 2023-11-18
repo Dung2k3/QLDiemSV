@@ -78,15 +78,5 @@ namespace QLDiemSV.BLL
                 MessageBox.Show(e.Message);
             }
         }
-        public string CheckDangNhap(string tk, string mk,int loai)
-        {
-            QLSinhVienDataContext dbroot = new QLSinhVienDataContext();
-            return dbroot.ft_ChkDangNhap(tk, mk, loai);
-        }
-        public bool CheckQuenMK(string tk, string email, string cccd, int loai)
-        {
-            QLSinhVienDataContext dbroot = new QLSinhVienDataContext();
-            return (bool)dbroot.ft_ChkQuenMatKhau(tk, email, cccd, loai);   
-        }
     }
 }

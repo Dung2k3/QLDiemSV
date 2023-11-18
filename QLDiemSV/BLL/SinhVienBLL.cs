@@ -90,8 +90,12 @@ namespace QLDiemSV.BLL
 
         public List<ft_ThongTinSVChuaHocResult> LayDSSVChuaHoc(string maLop)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.ft_ThongTinSVChuaHoc(maLop).ToList();
+        }
+
+        public List<ft_ThongKeSVResult> ThongKeSV(string maSV)
+        {
+            return db.ft_ThongKeSV(maSV).ToList();
         }
     }
 }

@@ -45,5 +45,13 @@ namespace QLDiemSV.UI.Teacher
             UCXemDiemGV ucXemDiem = new UCXemDiemGV(giangVien);
             pnlNoiDung.Controls.Add(ucXemDiem);
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            FMessageBox frmMessageBox = new FMessageBox("Are you sure you want to log out?", "CONFIRM");
+            DialogResult result = frmMessageBox.ShowDialog();
+            if (result == DialogResult.OK)
+                this.Close();
+        }
     }
 }

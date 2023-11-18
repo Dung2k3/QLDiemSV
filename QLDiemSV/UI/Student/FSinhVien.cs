@@ -56,9 +56,11 @@ namespace QLDiemSV.UI.Student
             pnlNoiDung.Controls.Add(ucTTGV);
         }
 
-        private void guna2ControlBox3_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            pnlNoiDung.Controls.Clear();
+            UCThongKeDiemSV ucTTGV = new UCThongKeDiemSV(sinhvien);
+            pnlNoiDung.Controls.Add(ucTTGV);
         }
     }
 }

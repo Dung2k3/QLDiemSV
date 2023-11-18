@@ -56,7 +56,8 @@ namespace QLDiemSV.UI.Admin
                 form.ShowDialog();
                 UCQuanTriSV_Load(sender, e);
             }
-            else MessageBox.Show("Vui lòng chọn giảng viên");
+            else MessageBox.Show("Vui lòng chọn sinh viên");
+            ClearControl();
         }
 
         private void pbXoa_Click(object sender, EventArgs e)
@@ -64,6 +65,7 @@ namespace QLDiemSV.UI.Admin
             SINHVIEN sv = sinhVienBLL.FindByID(txtMaSV.Text);
             sinhVienBLL.Delete(sv);
             UCQuanTriSV_Load(sender, e);
+            ClearControl();
         }
 
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
@@ -90,6 +92,19 @@ namespace QLDiemSV.UI.Admin
 
             gvLopSV.DataSource = sinhVienBLL.FindLopSVHoc(txtMaSV.Text);
             gvLopSV.ScrollBars = ScrollBars.Both;
+        }
+
+        private void ClearControl()
+        {
+            txtMaSV.Clear();
+            txtHoTen.Clear();
+            txtCMND.Clear();
+            txtDiaChi.Clear();
+            txtGioiTinh.Clear();
+            txtSDT.Clear();
+            txtEmail.Clear();
+            txtKhoa.Clear();
+            txtNienKhoa.Clear();
         }
     }
 }

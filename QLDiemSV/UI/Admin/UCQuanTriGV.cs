@@ -45,6 +45,7 @@ namespace QLDiemSV.UI.Admin
             GIANGVIEN gv = giangvien.FindGiangVienByID(txtMaGV.Text);
             giangvien.DeleteGiangVien(gv);
             UCQuanTriGV_Load(sender, e);
+            ClearControl();
         }
 
         private void pbThem_Click(object sender, EventArgs e)
@@ -63,6 +64,7 @@ namespace QLDiemSV.UI.Admin
                 UCQuanTriGV_Load(sender, e);
             }
             else MessageBox.Show("Vui lòng chọn giảng viên"); 
+            ClearControl();
         }
 
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
@@ -89,6 +91,19 @@ namespace QLDiemSV.UI.Admin
 
             gvLopGV.DataSource = giangvien.FindLopGVDay(txtMaGV.Text);
             gvGiangVien.ScrollBars = ScrollBars.Both;
+        }
+
+        private void ClearControl()
+        {
+            txtMaGV.Clear();
+            txtHoTen.Clear();
+            txtCMND.Clear();
+            txtDiaChi.Clear();
+            txtGioiTinh.Clear();
+            txtSDT.Clear();
+            txtEmail.Clear();
+            txtKhoa.Clear();
+            txtLoaiGV.Clear();
         }
     }
 }

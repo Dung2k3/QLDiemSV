@@ -45,6 +45,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -213,6 +214,12 @@
     <Compile Include="UI\Student\UCThoiKhoaBieuSV.Designer.cs">
       <DependentUpon>UCThoiKhoaBieuSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Student\UCThongKeDiemSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Student\UCThongKeDiemSV.Designer.cs">
+      <DependentUpon>UCThongKeDiemSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Student\UCThongTinLopSV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -346,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Student\UCThoiKhoaBieuSV.resx">
       <DependentUpon>UCThoiKhoaBieuSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\UCThongKeDiemSV.resx">
+      <DependentUpon>UCThongKeDiemSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Student\UCThongTinLopSV.resx">
       <DependentUpon>UCThongTinLopSV.cs</DependentUpon>

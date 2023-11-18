@@ -32,8 +32,8 @@ namespace QLDiemSV.UI.Admin
 
         private void FillSV()
         {
-            List<FT_TimTTLopTheoIDResult> TTLopList = lopBLL.FindThongTinLopByID(MaLop);
-            FT_TimTTLopTheoIDResult TTLop = TTLopList[0];
+            List<ft_TimTTLopTheoIDResult> TTLopList = lopBLL.FindThongTinLopByID(MaLop);
+            ft_TimTTLopTheoIDResult TTLop = TTLopList[0];
             txtMaLop.Text = TTLop.MaLop;
             txtTenLop.Text = TTLop.TenLop;
             txtSL.Text = TTLop.SoLuongSV.ToString() + " / " + TTLop.SoLuongMax.ToString();

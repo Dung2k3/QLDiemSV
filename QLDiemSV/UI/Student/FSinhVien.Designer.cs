@@ -33,6 +33,7 @@
             this.pnlNoiDung = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongTinCaNhan = new Guna.UI2.WinForms.Guna2Button();
             this.btnTKB = new Guna.UI2.WinForms.Guna2Button();
             this.pbTrangChu = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -59,6 +60,7 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderRadius = 15;
+            this.guna2Panel2.Controls.Add(this.guna2Button1);
             this.guna2Panel2.Controls.Add(this.btnThongTinCaNhan);
             this.guna2Panel2.Controls.Add(this.btnTKB);
             this.guna2Panel2.Controls.Add(this.pbTrangChu);
@@ -69,6 +71,38 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(347, 800);
             this.guna2Panel2.TabIndex = 119;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(56)))), ((int)(((byte)(100)))));
+            this.guna2Button1.BorderRadius = 25;
+            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.CheckedState.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(56)))), ((int)(((byte)(100)))));
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(56)))), ((int)(((byte)(100)))));
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.Image = global::QLDiemSV.Properties.Resources.information;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.ImageOffset = new System.Drawing.Point(60, 0);
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(-35, 542);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(351, 62);
+            this.guna2Button1.TabIndex = 120;
+            this.guna2Button1.Text = "Statistics";
+            this.guna2Button1.TextOffset = new System.Drawing.Point(50, 0);
+            this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btnThongTinCaNhan
             // 
@@ -125,7 +159,7 @@
             this.btnTKB.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTKB.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnTKB.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTKB.Location = new System.Drawing.Point(-35, 392);
+            this.btnTKB.Location = new System.Drawing.Point(-35, 374);
             this.btnTKB.Name = "btnTKB";
             this.btnTKB.Size = new System.Drawing.Size(351, 62);
             this.btnTKB.TabIndex = 118;
@@ -169,7 +203,7 @@
             this.btnPhongHoc.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPhongHoc.ImageOffset = new System.Drawing.Point(60, 0);
             this.btnPhongHoc.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPhongHoc.Location = new System.Drawing.Point(-35, 500);
+            this.btnPhongHoc.Location = new System.Drawing.Point(-35, 465);
             this.btnPhongHoc.Name = "btnPhongHoc";
             this.btnPhongHoc.Size = new System.Drawing.Size(351, 62);
             this.btnPhongHoc.TabIndex = 110;
@@ -223,7 +257,6 @@
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(33, 29);
             this.guna2ControlBox3.TabIndex = 122;
-            this.guna2ControlBox3.Click += new System.EventHandler(this.guna2ControlBox3_Click);
             // 
             // guna2ControlBox4
             // 
@@ -272,5 +305,6 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

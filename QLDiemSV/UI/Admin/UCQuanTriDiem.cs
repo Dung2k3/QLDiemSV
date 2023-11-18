@@ -39,24 +39,34 @@ namespace QLDiemSV.UI.Admin
 
         private void pbSua_Click(object sender, EventArgs e)
         {
-            DIEM diem = diemBLL.FindDiemByID(txtMaSV.Text, txtMaLop.Text);
+            if (txtMaSV.Text != "" && txtMaLop.Text != "")
+            {
+                DIEM diem = diemBLL.FindDiemByID(txtMaSV.Text, txtMaLop.Text);
             if(txtDiemQT.Text !="")
                 diem.DiemQT = decimal.Parse(txtDiemQT.Text);
             if (txtDiemCK.Text != "")
                 diem.DiemCK = decimal.Parse(txtDiemCK.Text);
             diemBLL.UpdateDiem(diem);
+            }
+            else MessageBox.Show("Vui lòng chọn sinh viên");
 
             UCQuanTriDiem_Load(sender, e);
         }
 
         private void pbXoa_Click(object sender, EventArgs e)
         {
+            if (txtMaSV.Text != "" && txtMaLop.Text!="")
+            {
             DIEM diem = diemBLL.FindDiemByID(txtMaSV.Text, txtMaLop.Text);
             diemBLL.DeleteDiem(diem);
             UCQuanTriDiem_Load(sender, e);
+            ClearControl();
+
+            }
+            else MessageBox.Show("Vui lòng chọn sinh viên");
         }
 
-        private void LamSach()
+        private void ClearControl()
         {
             txtMaSV.Clear();
             txtTenSV.Clear();
@@ -68,7 +78,7 @@ namespace QLDiemSV.UI.Admin
 
         private void gvDiemLop_DoubleClick(object sender, EventArgs e)
         {
-            LamSach();
+            ClearControl();
             lblMaLop.Text = "Mã lớp";
             lblTenLop.Text = "Tên lớp";
 
@@ -86,7 +96,7 @@ namespace QLDiemSV.UI.Admin
 
         private void gvDiemMon_DoubleClick(object sender, EventArgs e)
         {
-            LamSach();
+            ClearControl();
             lblMaLop.Text = "Mã môn";
             lblTenLop.Text = "Tên môn";
 

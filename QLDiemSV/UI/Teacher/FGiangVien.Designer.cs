@@ -34,12 +34,12 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.btnThongTinCaNhan = new Guna.UI2.WinForms.Guna2Button();
             this.btnTKB = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnXemDiem = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -230,9 +230,12 @@
             this.btnDangXuat.Text = "Log out";
             this.btnDangXuat.TextOffset = new System.Drawing.Point(50, 0);
             this.btnDangXuat.UseTransparentBackground = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // FGiangVien
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1500, 798);
             this.Controls.Add(this.pnlNoiDung);

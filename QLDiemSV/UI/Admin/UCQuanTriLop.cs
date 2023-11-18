@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,12 +25,14 @@ namespace QLDiemSV.UI.Admin
             FInsertLop form = new FInsertLop();
             form.ShowDialog();
             UCQuanTriLop_Load(sender, e);
+            ClearControl();
         }
 
         private void pbXoa_Click(object sender, EventArgs e)
         {
             lopBLL.DeleteLop(txtMaLop.Text);
             UCQuanTriLop_Load(sender, e);
+            ClearControl();
         }
 
         private void UCQuanTriLop_Load(object sender, EventArgs e)
@@ -46,8 +49,8 @@ namespace QLDiemSV.UI.Admin
             txtLoaiLop.Text = gvLop.CurrentRow.Cells[3].Value.ToString();
             txtSSV.Text = gvLop.CurrentRow.Cells[4].Value.ToString() + " / " + gvLop.CurrentRow.Cells[5].Value.ToString();
             txtHK.Text = gvLop.CurrentRow.Cells[6].Value.ToString();
-            txtNamHoc.Text = gvLop.CurrentRow.Cells[7].Value.ToString();
-            txtGiangVien.Text = gvLop.CurrentRow.Cells[8].Value.ToString();
+            txtNamHoc.Text = gvLop.CurrentRow.Cells[8].Value.ToString();
+            txtGiangVien.Text = gvLop.CurrentRow.Cells[9].Value.ToString();
         }
 
         private void ptbThemSV_Click(object sender, EventArgs e)
@@ -59,6 +62,18 @@ namespace QLDiemSV.UI.Admin
                 UCQuanTriLop_Load(sender, e);
             }
             else MessageBox.Show("Vui lòng chọn lớp");
+        }
+
+        private void ClearControl()
+        {
+            txtMaLop.Clear();
+            txtTenLop.Clear();
+            txtMonHoc.Clear();
+            txtLoaiLop.Clear();
+            txtSSV.Clear();
+            txtHK.Clear();
+            txtNamHoc.Clear();
+            txtGiangVien.Clear();
         }
     }
 }

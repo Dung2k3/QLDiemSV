@@ -54,12 +54,10 @@ namespace QLDiemSV.UI.Admin
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void FAdmin_Load(object sender, EventArgs e)
-        {
-
+            FMessageBox frmMessageBox = new FMessageBox("Are you sure you want to log out?", "CONFIRM");
+            DialogResult result = frmMessageBox.ShowDialog();
+            if (result == DialogResult.OK)
+                this.Close();
         }
     }
 }

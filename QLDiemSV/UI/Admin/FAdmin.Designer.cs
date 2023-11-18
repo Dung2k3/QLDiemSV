@@ -311,7 +311,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FAdmin";
             this.Text = "FAdmin";
-            this.Load += new System.EventHandler(this.FAdmin_Load);
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);

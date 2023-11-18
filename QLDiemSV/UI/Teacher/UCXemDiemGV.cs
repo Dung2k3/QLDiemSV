@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace QLDiemSV.UI.Teacher
 {
@@ -34,7 +35,22 @@ namespace QLDiemSV.UI.Teacher
 
         private void cmbLop_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int[] SLDiem = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             listDiem = gvBLL.GVXemDiem(giangVien.MaGV, cmbLop.SelectedValue.ToString());
+            foreach (ft_GVXemDiemResult diem in listDiem)
+                if (diem.DiemTB != null)
+                    SLDiem[(int)(double)diem.DiemTB / 1]++;
+            var KhoangDiem = new Guna.Charts.WinForms.GunaBarDataset();
+
+            for (int i = 0; i <= 10; i++)
+                KhoangDiem.DataPoints.Add(i.ToString(), SLDiem[i]);
+
+            gunaChart1.Legend.Display = false;
+            gunaChart1.Datasets.Clear();
+            if (KhoangDiem.DataPointCount > 0)
+            {
+                gunaChart1.Datasets.Add(KhoangDiem);
+            }
             gvBangDiem.DataSource = listDiem;
         }
 

@@ -78,7 +78,6 @@ namespace QLDiemSV.BLL
 
         public List<ft_FindDiemSVTheoLopResult> FindDiemSVTheoMaLop (string maLop)
         {
-            QLSinhVienDataContext db = new QLSinhVienDataContext();
             return db.ft_FindDiemSVTheoLop(maLop).ToList();
         }
     }
