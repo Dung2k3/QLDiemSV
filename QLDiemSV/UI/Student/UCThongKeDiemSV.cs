@@ -29,36 +29,44 @@ namespace QLDiemSV.UI.Student
             List<ft_ThongKeSVResult> list = svBLL.ThongKeSV(sv.MaSV);
             int dau = 0;
             int rot = 0;
-            foreach (ft_ThongKeSVResult point in list)
+            if (list.Count > 0)
             {
-                DiemTheoKy.DataPoints.Add("HK " + point.HK.ToString() +
-                    "/" + point.Namhoc.ToString()
-                     , (double)point.TB);
-                DiemCanhBao.DataPoints.Add("HK " + point.HK.ToString() +
-                    "/" + point.Namhoc.ToString(), 5);
-                List<ft_ThongTinLopTheoHSResult> listDiemTheoLop = lopBLL.FindByID_HK_NHvi(sv.MaSV, point.HK, point.Namhoc);
-                if (listDiemTheoLop.Count > 0)
-                    foreach (ft_ThongTinLopTheoHSResult diem in listDiemTheoLop)
+                foreach (ft_ThongKeSVResult point in list)
+                {
+                    if (point.TB != null)
                     {
-                        if ("✔".Equals(diem.QUAMON)) dau++;
-                        if ("✘".Equals(diem.QUAMON)) rot++;
+                        DiemTheoKy.DataPoints.Add("HK " + point.HK.ToString() +
+                            "/" + point.Namhoc.ToString()
+                             , (double)point.TB);
+                        DiemCanhBao.DataPoints.Add("HK " + point.HK.ToString() +
+                            "/" + point.Namhoc.ToString(), 5);
+                        List<ft_ThongTinLopTheoHSResult> listDiemTheoLop = lopBLL.FindByID_HK_NHvi(sv.MaSV, point.HK, point.Namhoc);
+                        if (listDiemTheoLop.Count > 0)
+                            foreach (ft_ThongTinLopTheoHSResult diem in listDiemTheoLop)
+                            {
+                                if ("✔".Equals(diem.QUAMON)) dau++;
+                                if ("✘".Equals(diem.QUAMON)) rot++;
+                            }
                     }
+           
 
+                }
+                gunaChart1.YAxes.Ticks.HasMaximum = true;
+                gvThongTin.DataSource = DiemTheoKy.DataPoints;
+
+                var Daurot = new Guna.Charts.WinForms.GunaPieDataset();
+                Daurot.DataPoints.Add("Số môn đậu", dau);
+                Daurot.DataPoints.Add("Số môn rớt", rot);
+
+                gunaChart2.Legend.Display = false;
+                gunaChart2.XAxes.Display = false;
+                gunaChart2.YAxes.Display = false;
+                gunaChart2.Datasets.Add(Daurot);
+                gunaChart2.Update();
+                guna2DataGridView1.DataSource = Daurot.DataPoints;
             }
-            gunaChart1.YAxes.Ticks.HasMaximum= true;
-            gvThongTin.DataSource = DiemTheoKy.DataPoints;
 
-            var Daurot = new Guna.Charts.WinForms.GunaPieDataset();
-            Daurot.DataPoints.Add("Số môn đậu", dau);
-            Daurot.DataPoints.Add("Số môn rớt", rot);
-
-            gunaChart2.Legend.Display = false;
-            gunaChart2.XAxes.Display = false;
-            gunaChart2.YAxes.Display = false;
-            gunaChart2.Datasets.Add(Daurot);
-            gunaChart2.Update();
-
-            guna2DataGridView1.DataSource = Daurot.DataPoints;
+            
 
         }
 

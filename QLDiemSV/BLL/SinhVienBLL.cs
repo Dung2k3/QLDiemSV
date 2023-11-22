@@ -29,7 +29,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.ToString());
+                FMessageBox.Show(ex.ToString());
             }
         }
         public void Update(SINHVIEN sv)
@@ -41,7 +41,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public void Delete(SINHVIEN sv)
@@ -53,7 +53,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public SINHVIEN FindByID(string id)

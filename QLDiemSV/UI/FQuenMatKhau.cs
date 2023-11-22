@@ -35,14 +35,14 @@ namespace QLDiemSV.UI
                 db.pr_UpdateTaiKhoan(tk, mkmoi, loai);
                 //FrmMessageBox frmMessageBox = new FrmMessageBox("The password has been successfully changed", "ANNOUNCEMENT");
                 //DialogResult result = frmMessageBox.ShowDialog();
-                MessageBox.Show("Cập nhật thành công");
+                FMessageBox.Show("Cập nhật thành công");
                 this.Close();
             }
             else
             {
                 //FrmMessageBox frmMessageBox = new FrmMessageBox("The information is not valid", "WARNING");
                 //DialogResult result = frmMessageBox.ShowDialog();
-                MessageBox.Show("thông tin không đúng");
+                FMessageBox.Show("thông tin không đúng");
             }
         }
     }

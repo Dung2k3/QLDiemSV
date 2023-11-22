@@ -34,7 +34,6 @@
             this.lblHoTen = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.pbUpdate = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,14 +43,17 @@
             this.lblCCCD = new System.Windows.Forms.Label();
             this.lblNamHoc = new System.Windows.Forms.Label();
             this.lblGioiTinh = new System.Windows.Forms.Label();
-            this.btnSDT = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEmail = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pbUpdateMK = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbUpdate = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnSDT = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEmail = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUpdateMK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDiaChi
@@ -91,6 +93,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 25;
+            this.guna2Panel1.Controls.Add(this.pbUpdateMK);
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.pbUpdate);
             this.guna2Panel1.Controls.Add(this.label5);
@@ -123,20 +126,6 @@
             this.label6.TabIndex = 267;
             this.label6.Text = "Niên khóa:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pbUpdate
-            // 
-            this.pbUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbUpdate.FillColor = System.Drawing.Color.Transparent;
-            this.pbUpdate.Image = global::QLDiemSV.Properties.Resources.compose;
-            this.pbUpdate.ImageRotate = 0F;
-            this.pbUpdate.Location = new System.Drawing.Point(10, 10);
-            this.pbUpdate.Name = "pbUpdate";
-            this.pbUpdate.Size = new System.Drawing.Size(46, 37);
-            this.pbUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbUpdate.TabIndex = 262;
-            this.pbUpdate.TabStop = false;
-            this.pbUpdate.Click += new System.EventHandler(this.pbUpdate_Click);
             // 
             // label5
             // 
@@ -244,6 +233,62 @@
             this.lblGioiTinh.Text = "Giới tính";
             this.lblGioiTinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(837, -81);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(164, 388);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 260;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::QLDiemSV.Properties.Resources.account;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(492, 17);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(164, 166);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 259;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            // 
+            // pbUpdateMK
+            // 
+            this.pbUpdateMK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbUpdateMK.FillColor = System.Drawing.Color.Transparent;
+            this.pbUpdateMK.Image = global::QLDiemSV.Properties.Resources.padlock;
+            this.pbUpdateMK.ImageRotate = 0F;
+            this.pbUpdateMK.Location = new System.Drawing.Point(62, 10);
+            this.pbUpdateMK.Name = "pbUpdateMK";
+            this.pbUpdateMK.Size = new System.Drawing.Size(46, 37);
+            this.pbUpdateMK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUpdateMK.TabIndex = 268;
+            this.pbUpdateMK.TabStop = false;
+            this.pbUpdateMK.Click += new System.EventHandler(this.pbUpdateMK_Click);
+            // 
+            // pbUpdate
+            // 
+            this.pbUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbUpdate.FillColor = System.Drawing.Color.Transparent;
+            this.pbUpdate.Image = global::QLDiemSV.Properties.Resources.compose;
+            this.pbUpdate.ImageRotate = 0F;
+            this.pbUpdate.Location = new System.Drawing.Point(10, 10);
+            this.pbUpdate.Name = "pbUpdate";
+            this.pbUpdate.Size = new System.Drawing.Size(46, 37);
+            this.pbUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUpdate.TabIndex = 262;
+            this.pbUpdate.TabStop = false;
+            this.pbUpdate.Click += new System.EventHandler(this.pbUpdate_Click);
+            // 
             // btnSDT
             // 
             this.btnSDT.BackColor = System.Drawing.Color.Transparent;
@@ -282,34 +327,6 @@
             this.btnEmail.TabIndex = 200;
             this.btnEmail.Text = "Email";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(837, -81);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(164, 388);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 260;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::QLDiemSV.Properties.Resources.account;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(492, 17);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(164, 166);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 259;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
-            // 
             // UCThongTinSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -321,9 +338,10 @@
             this.Name = "UCThongTinSV";
             this.Size = new System.Drawing.Size(1156, 710);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUpdateMK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUpdate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,5 +367,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2PictureBox pbUpdate;
+        private Guna.UI2.WinForms.Guna2PictureBox pbUpdateMK;
     }
 }

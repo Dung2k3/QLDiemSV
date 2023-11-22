@@ -63,7 +63,7 @@ namespace QLDiemSV.UI.Admin
                 form.ShowDialog();
                 UCQuanTriGV_Load(sender, e);
             }
-            else MessageBox.Show("Vui lòng chọn giảng viên"); 
+            else FMessageBox.Show("Vui lòng chọn giảng viên"); 
             ClearControl();
         }
 

@@ -25,7 +25,7 @@ namespace QLDiemSV.BLL
                 db.PR_InsertMONTQ(monTienQuyet.MaMon, monTienQuyet.MaMonTQ);
             }
             catch (SqlException e) { 
-                MessageBox.Show(e.Message); 
+                FMessageBox.Show(e.Message); 
             }
         }
 
@@ -38,7 +38,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e) 
             { 
-                MessageBox.Show(e.Message); 
+                FMessageBox.Show(e.Message); 
             }
         }
     }

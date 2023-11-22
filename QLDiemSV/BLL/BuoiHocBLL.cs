@@ -26,7 +26,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public void UpdateBuoiHoc(BUOIHOC bhUpdate)
@@ -37,7 +37,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public void DeleteBuoiHoc(BUOIHOC bhDelete)
@@ -48,7 +48,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public List<BUOIHOC> FindAllBuoiHoc()

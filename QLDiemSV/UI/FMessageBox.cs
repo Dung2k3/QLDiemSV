@@ -33,5 +33,16 @@ namespace QLDiemSV.UI
         {
             Close();
         }
+        public static void Show(string mess,string tit)
+        {
+            FMessageBox frmMessageBox = new FMessageBox(mess, tit);
+            frmMessageBox.ShowDialog();
+        }
+
+        public static void Show(string mess)
+        {
+            FMessageBox frmMessageBox = new FMessageBox(mess, "ANNOUNCEMENT");
+            frmMessageBox.ShowDialog();
+        }
     }
 }

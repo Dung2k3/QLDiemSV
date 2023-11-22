@@ -35,7 +35,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public void UpdateMonHoc(MONHOC monHoc)
@@ -47,7 +47,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
 
@@ -60,7 +60,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
     }

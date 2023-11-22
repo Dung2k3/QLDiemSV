@@ -26,7 +26,7 @@ namespace QLDiemSV
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public void UpdateKhoa(KHOA khoa)
@@ -37,7 +37,7 @@ namespace QLDiemSV
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public void DeleteKhoa(string maKhoa)
@@ -48,7 +48,7 @@ namespace QLDiemSV
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public List<KHOA> FindAllKhoa()

@@ -66,7 +66,7 @@ namespace QLDiemSV.UI.Teacher
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             if (lblMaSV.Text == "")
-                MessageBox.Show("Thiếu dữ liệu");
+                FMessageBox.Show("Thiếu dữ liệu");
             else
             {
                 DIEM diem = new DIEM();

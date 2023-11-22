@@ -48,7 +48,7 @@ namespace QLDiemSV.UI.Admin
                 diem.DiemCK = decimal.Parse(txtDiemCK.Text);
             diemBLL.UpdateDiem(diem);
             }
-            else MessageBox.Show("Vui lòng chọn sinh viên");
+            else FMessageBox.Show("Vui lòng chọn sinh viên");
 
             UCQuanTriDiem_Load(sender, e);
         }
@@ -63,7 +63,7 @@ namespace QLDiemSV.UI.Admin
             ClearControl();
 
             }
-            else MessageBox.Show("Vui lòng chọn sinh viên");
+            else FMessageBox.Show("Vui lòng chọn sinh viên");
         }
 
         private void ClearControl()

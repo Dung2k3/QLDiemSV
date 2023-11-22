@@ -31,26 +31,28 @@
             this.lblTenGV = new System.Windows.Forms.Label();
             this.lblNgaySinh = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblKhoa = new System.Windows.Forms.Label();
-            this.lblCCCD = new System.Windows.Forms.Label();
-            this.lblDiaChi = new System.Windows.Forms.Label();
-            this.lblGioiTinh = new System.Windows.Forms.Label();
-            this.btnMaGV = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblKhoa = new System.Windows.Forms.Label();
+            this.lblCCCD = new System.Windows.Forms.Label();
+            this.lblDiaChi = new System.Windows.Forms.Label();
+            this.lblGioiTinh = new System.Windows.Forms.Label();
+            this.btnMaGV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSDT = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEmail = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pbSua = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnSDT = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEmail = new Guna.UI2.WinForms.Guna2Button();
+            this.pbSuaMK = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSua)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSuaMK)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTenGV
@@ -99,70 +101,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(886, 552);
             this.guna2Panel1.TabIndex = 294;
-            // 
-            // lblKhoa
-            // 
-            this.lblKhoa.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.lblKhoa.ForeColor = System.Drawing.Color.Black;
-            this.lblKhoa.Location = new System.Drawing.Point(561, 333);
-            this.lblKhoa.Name = "lblKhoa";
-            this.lblKhoa.Size = new System.Drawing.Size(243, 28);
-            this.lblKhoa.TabIndex = 250;
-            this.lblKhoa.Text = "Khoa";
-            this.lblKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblKhoa.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // lblCCCD
-            // 
-            this.lblCCCD.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.lblCCCD.ForeColor = System.Drawing.Color.Black;
-            this.lblCCCD.Location = new System.Drawing.Point(561, 239);
-            this.lblCCCD.Name = "lblCCCD";
-            this.lblCCCD.Size = new System.Drawing.Size(243, 28);
-            this.lblCCCD.TabIndex = 249;
-            this.lblCCCD.Text = "CCCD";
-            this.lblCCCD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDiaChi
-            // 
-            this.lblDiaChi.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.lblDiaChi.ForeColor = System.Drawing.Color.Black;
-            this.lblDiaChi.Location = new System.Drawing.Point(561, 145);
-            this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(243, 28);
-            this.lblDiaChi.TabIndex = 248;
-            this.lblDiaChi.Text = "Địa chỉ";
-            this.lblDiaChi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblGioiTinh
-            // 
-            this.lblGioiTinh.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.lblGioiTinh.ForeColor = System.Drawing.Color.Black;
-            this.lblGioiTinh.Location = new System.Drawing.Point(143, 333);
-            this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(243, 28);
-            this.lblGioiTinh.TabIndex = 247;
-            this.lblGioiTinh.Text = "Giới tính";
-            this.lblGioiTinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnMaGV
-            // 
-            this.btnMaGV.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaGV.BorderRadius = 15;
-            this.btnMaGV.DialogResult = System.Windows.Forms.DialogResult.Ignore;
-            this.btnMaGV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMaGV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMaGV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMaGV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMaGV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
-            this.btnMaGV.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaGV.ForeColor = System.Drawing.Color.White;
-            this.btnMaGV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMaGV.Location = new System.Drawing.Point(301, 88);
-            this.btnMaGV.Name = "btnMaGV";
-            this.btnMaGV.Size = new System.Drawing.Size(290, 45);
-            this.btnMaGV.TabIndex = 246;
-            this.btnMaGV.Text = "Mã giáo viên";
             // 
             // label1
             // 
@@ -230,6 +168,108 @@
             this.label6.Text = "Họ tên:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lblKhoa
+            // 
+            this.lblKhoa.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.lblKhoa.ForeColor = System.Drawing.Color.Black;
+            this.lblKhoa.Location = new System.Drawing.Point(561, 333);
+            this.lblKhoa.Name = "lblKhoa";
+            this.lblKhoa.Size = new System.Drawing.Size(243, 28);
+            this.lblKhoa.TabIndex = 250;
+            this.lblKhoa.Text = "Khoa";
+            this.lblKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblKhoa.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // lblCCCD
+            // 
+            this.lblCCCD.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.lblCCCD.ForeColor = System.Drawing.Color.Black;
+            this.lblCCCD.Location = new System.Drawing.Point(561, 239);
+            this.lblCCCD.Name = "lblCCCD";
+            this.lblCCCD.Size = new System.Drawing.Size(243, 28);
+            this.lblCCCD.TabIndex = 249;
+            this.lblCCCD.Text = "CCCD";
+            this.lblCCCD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDiaChi
+            // 
+            this.lblDiaChi.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.lblDiaChi.ForeColor = System.Drawing.Color.Black;
+            this.lblDiaChi.Location = new System.Drawing.Point(561, 145);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(243, 28);
+            this.lblDiaChi.TabIndex = 248;
+            this.lblDiaChi.Text = "Địa chỉ";
+            this.lblDiaChi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblGioiTinh
+            // 
+            this.lblGioiTinh.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.lblGioiTinh.ForeColor = System.Drawing.Color.Black;
+            this.lblGioiTinh.Location = new System.Drawing.Point(143, 333);
+            this.lblGioiTinh.Name = "lblGioiTinh";
+            this.lblGioiTinh.Size = new System.Drawing.Size(243, 28);
+            this.lblGioiTinh.TabIndex = 247;
+            this.lblGioiTinh.Text = "Giới tính";
+            this.lblGioiTinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnMaGV
+            // 
+            this.btnMaGV.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaGV.BorderRadius = 15;
+            this.btnMaGV.DialogResult = System.Windows.Forms.DialogResult.Ignore;
+            this.btnMaGV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMaGV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMaGV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMaGV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMaGV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
+            this.btnMaGV.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaGV.ForeColor = System.Drawing.Color.White;
+            this.btnMaGV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMaGV.Location = new System.Drawing.Point(301, 88);
+            this.btnMaGV.Name = "btnMaGV";
+            this.btnMaGV.Size = new System.Drawing.Size(290, 45);
+            this.btnMaGV.TabIndex = 246;
+            this.btnMaGV.Text = "Mã giáo viên";
+            // 
+            // btnSDT
+            // 
+            this.btnSDT.BackColor = System.Drawing.Color.Transparent;
+            this.btnSDT.BorderRadius = 15;
+            this.btnSDT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSDT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSDT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
+            this.btnSDT.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSDT.ForeColor = System.Drawing.Color.White;
+            this.btnSDT.Image = global::QLDiemSV.Properties.Resources.phone_call;
+            this.btnSDT.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSDT.Location = new System.Drawing.Point(235, 416);
+            this.btnSDT.Name = "btnSDT";
+            this.btnSDT.Size = new System.Drawing.Size(433, 45);
+            this.btnSDT.TabIndex = 199;
+            this.btnSDT.Text = "Số điện thoại";
+            // 
+            // btnEmail
+            // 
+            this.btnEmail.BackColor = System.Drawing.Color.Transparent;
+            this.btnEmail.BorderRadius = 15;
+            this.btnEmail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEmail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEmail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
+            this.btnEmail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.ForeColor = System.Drawing.Color.White;
+            this.btnEmail.Image = global::QLDiemSV.Properties.Resources.email;
+            this.btnEmail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEmail.Location = new System.Drawing.Point(235, 492);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Size = new System.Drawing.Size(433, 45);
+            this.btnEmail.TabIndex = 200;
+            this.btnEmail.Text = "Email";
+            // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -273,49 +313,27 @@
             this.pbSua.UseTransparentBackground = true;
             this.pbSua.Click += new System.EventHandler(this.pbSua_Click);
             // 
-            // btnSDT
+            // pbSuaMK
             // 
-            this.btnSDT.BackColor = System.Drawing.Color.Transparent;
-            this.btnSDT.BorderRadius = 15;
-            this.btnSDT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSDT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSDT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
-            this.btnSDT.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSDT.ForeColor = System.Drawing.Color.White;
-            this.btnSDT.Image = global::QLDiemSV.Properties.Resources.phone_call;
-            this.btnSDT.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSDT.Location = new System.Drawing.Point(235, 416);
-            this.btnSDT.Name = "btnSDT";
-            this.btnSDT.Size = new System.Drawing.Size(433, 45);
-            this.btnSDT.TabIndex = 199;
-            this.btnSDT.Text = "Số điện thoại";
-            // 
-            // btnEmail
-            // 
-            this.btnEmail.BackColor = System.Drawing.Color.Transparent;
-            this.btnEmail.BorderRadius = 15;
-            this.btnEmail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEmail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEmail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(179)))), ((int)(((byte)(249)))));
-            this.btnEmail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmail.ForeColor = System.Drawing.Color.White;
-            this.btnEmail.Image = global::QLDiemSV.Properties.Resources.email;
-            this.btnEmail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEmail.Location = new System.Drawing.Point(235, 492);
-            this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Size = new System.Drawing.Size(433, 45);
-            this.btnEmail.TabIndex = 200;
-            this.btnEmail.Text = "Email";
+            this.pbSuaMK.BackColor = System.Drawing.Color.Transparent;
+            this.pbSuaMK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSuaMK.Image = global::QLDiemSV.Properties.Resources.padlock;
+            this.pbSuaMK.ImageRotate = 0F;
+            this.pbSuaMK.Location = new System.Drawing.Point(1051, 600);
+            this.pbSuaMK.Name = "pbSuaMK";
+            this.pbSuaMK.Size = new System.Drawing.Size(65, 65);
+            this.pbSuaMK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSuaMK.TabIndex = 310;
+            this.pbSuaMK.TabStop = false;
+            this.pbSuaMK.UseTransparentBackground = true;
+            this.pbSuaMK.Click += new System.EventHandler(this.pbSuaMK_Click);
             // 
             // UCThongTinGV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pbSuaMK);
             this.Controls.Add(this.pbSua);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.guna2PictureBox1);
@@ -327,6 +345,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSua)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSuaMK)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -352,5 +371,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2PictureBox pbSua;
+        private Guna.UI2.WinForms.Guna2PictureBox pbSuaMK;
     }
 }

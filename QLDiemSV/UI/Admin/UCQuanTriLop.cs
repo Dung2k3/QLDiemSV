@@ -61,7 +61,7 @@ namespace QLDiemSV.UI.Admin
                 form.ShowDialog();
                 UCQuanTriLop_Load(sender, e);
             }
-            else MessageBox.Show("Vui lòng chọn lớp");
+            else FMessageBox.Show("Vui lòng chọn lớp");
         }
 
         private void ClearControl()

@@ -26,7 +26,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public void UpdateDiem(DIEM diemUpdate)
@@ -37,7 +37,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public void DeleteDiem(DIEM diemDelete)
@@ -48,7 +48,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public List<DIEM> FindAllDiem()

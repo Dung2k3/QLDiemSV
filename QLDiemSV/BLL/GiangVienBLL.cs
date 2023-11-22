@@ -28,7 +28,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public void UpdateGiangVien(GIANGVIEN gv)
@@ -40,7 +40,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public void DeleteGiangVien(GIANGVIEN gv)
@@ -52,7 +52,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
         public List<GIANGVIEN> FindAllGiangVien()
@@ -66,7 +66,7 @@ namespace QLDiemSV.BLL
                 return db.GIANGVIENs.FirstOrDefault(e => e.MaGV.Equals(maGV));
             } catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
                 return null;
             }
            
@@ -79,7 +79,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
                 return null;
             }
         }  

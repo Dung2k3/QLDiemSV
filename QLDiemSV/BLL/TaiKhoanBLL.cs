@@ -47,7 +47,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e) 
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
             }
         }
 
@@ -61,7 +61,7 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e) 
             {
-                MessageBox.Show(e.Message); 
+                FMessageBox.Show(e.Message); 
             }
         }
 
@@ -75,7 +75,22 @@ namespace QLDiemSV.BLL
             }
             catch (SqlException e) 
             {
-                MessageBox.Show(e.Message);
+                FMessageBox.Show(e.Message);
+            }
+        }
+
+        public bool DoiMatKhau(string mkcu, string mkmoi, string mkxacnhan)
+        {
+            try
+            {
+                db.pr_DoiMK(mkcu,mkmoi,mkxacnhan);
+                FDangNhap.matkhau = mkxacnhan;
+                return true;
+            }
+            catch (SqlException e)
+            {
+                FMessageBox.Show(e.Message);
+                return false;
             }
         }
     }

@@ -35,12 +35,12 @@ namespace QLDiemSV.UI.Admin
                 }
                 else
                 {
-                    MessageBox.Show("Bạn là robot!!");
+                    FMessageBox.Show("Bạn là robot!!");
                 }
             }
             else
             {
-                MessageBox.Show("Nhập lại mật khẩu!!");
+                FMessageBox.Show("Nhập lại mật khẩu!!");
             }
         }
 

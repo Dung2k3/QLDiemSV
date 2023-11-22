@@ -77,9 +77,7 @@ namespace QLDiemSV.UI
                     return;
                 }
             }
-            //FrmMessageBox frmMessageBox = new FrmMessageBox("Your login information is not correct. Please try again.", "WARNING");
-            //DialogResult result = frmMessageBox.ShowDialog();
-            MessageBox.Show("DangNhapLai");
+            FMessageBox.Show("DangNhapLai");
         }
 
         private void cbHide_CheckedChanged(object sender, EventArgs e)

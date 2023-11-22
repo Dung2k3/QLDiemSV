@@ -51,7 +51,7 @@ namespace QLDiemSV.UI.Admin
             form.ShowDialog();
             UCQuanTriTaiKhoan_Load(sender, e);
             }
-            else MessageBox.Show("Vui lòng chọn tài khoản");
+            else FMessageBox.Show("Vui lòng chọn tài khoản");
         }
 
         private void pbXoa_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace QLDiemSV.UI.Admin
                 tkBLL.Delete(txtTaiKhoan.Text);
                 UCQuanTriTaiKhoan_Load(sender, e);
             }
-            else MessageBox.Show("Vui lòng chọn tài khoản");
+            else FMessageBox.Show("Vui lòng chọn tài khoản");
             UCQuanTriTaiKhoan_Load(sender, e);
 
 

@@ -50,5 +50,16 @@ namespace QLDiemSV.UI.Teacher
             btnEmail.Text = viewGV.Email;
             btnSDT.Text = viewGV.SDT;
         }
+
+        private void pbSuaMK_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FDoiMatKhau fdoimk = new FDoiMatKhau();
+            fdoimk.ShowDialog();
+            this.Show();
+            gvBLL = new GiangVienBLL();
+            giangVien = gvBLL.FindGiangVienByID(giangVien.MaGV);
+            LoadThongTin(giangVien);
+        }
     }
 }

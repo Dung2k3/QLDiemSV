@@ -43,5 +43,15 @@ namespace QLDiemSV.UI.Student
             btnSDT.Text = sv.SDT;
             btnEmail.Text = sv.Email;
         }
+
+        private void pbUpdateMK_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FDoiMatKhau fdoimk = new FDoiMatKhau();
+            fdoimk.ShowDialog();
+            this.Show();
+            svBLL = new SinhVienBLL();
+            FillControl();
+        }
     }
 }
