@@ -172,6 +172,12 @@
     <Compile Include="UI\Admin\UCSVChuaHoc.Designer.cs">
       <DependentUpon>UCSVChuaHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FDoiMatKhau.Designer.cs">
+      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +339,9 @@
     <EmbeddedResource Include="UI\Admin\UCSVChuaHoc.resx">
       <DependentUpon>UCSVChuaHoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FDoiMatKhau.resx">
+      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FMessageBox.resx">
       <DependentUpon>FMessageBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -474,6 +483,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Artboard 1%404x3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

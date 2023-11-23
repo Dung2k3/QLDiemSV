@@ -598,6 +598,13 @@ namespace QLDiemSV
 		{
 			return this.CreateMethodCallQuery<ft_TKBSVTheoHKResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV, hK, namHoc);
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.pr_DoiMK")]
+		public int pr_DoiMK([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string mkcu, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string mkmoi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(20)")] string mkxacnhan)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mkcu, mkmoi, mkxacnhan);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CAHOC")]
